@@ -100,10 +100,11 @@ The per-run raw results are included, so the tables can be rebuilt with Python a
 git clone https://github.com/MrCO0W/A-gRPC-over-QUIC-Multi-Stream.git
 cd A-gRPC-over-QUIC-Multi-Stream/scripts
 python3 analyze.py --results ../results/raw --out /tmp/report
-diff /tmp/report/summary.csv ../results/summary.csv && echo identical
+diff --strip-trailing-cr /tmp/report/summary.csv ../results/summary.csv && echo identical
 ```
 
-The five CSV files produced this way are identical to those in `results/`.
+The five CSV files produced this way are identical to those in `results/`
+(`--strip-trailing-cr` ignores the CRLF/LF line-ending difference introduced by Git).
 Where each figure and table of the paper comes from:
 
 | Paper | Source |
@@ -134,6 +135,9 @@ Requirements: Linux with root, Mininet 2.3+, Go 1.22+, Python 3.8+, `tc`/netem.
 The full sweep takes about 2–2.5 hours.
 
 ```bash
+# 0) restore the execute permission of the shell scripts (lost when committed from Windows)
+chmod +x rpcbench/build.sh scripts/*.sh gaia-experiment-main/tools/*.sh
+
 # 1) build the gateways, run unit tests, create test certificates
 cd rpcbench && ./build.sh
 
