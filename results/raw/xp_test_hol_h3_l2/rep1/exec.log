@@ -1,0 +1,44 @@
+2026-09-14 20:39:21,202 [INFO] __init__: Minitopo version unknown
+2026-09-14 20:39:21,203 [INFO] __init__: {'topoType': 'Generic', 'router': ['r0,10.0.1.0/24,10.0.1.1', 'r1,10.0.2.0/24,10.0.2.1'], 'client': 'c0,r0,10.0.1.2', 'server': 's0,r1,10.0.2.2', 'link': ['c0,r0,1.0,1000,1000.0,0.0,0', 'r0,r1,18.0,100,50.0,2.0,0', 's0,r1,1.0,1000,1000.0,0.0,0'], 'transitSubnet': '172.31.0.0/16', 'changeNetem': 'false'}
+2026-09-14 20:39:21,203 [INFO] __init__: {'topoType': 'Generic', 'router': ['r0,10.0.1.0/24,10.0.1.1', 'r1,10.0.2.0/24,10.0.2.1'], 'client': 'c0,r0,10.0.1.2', 'server': 's0,r1,10.0.2.2', 'link': ['c0,r0,1.0,1000,1000.0,0.0,0', 'r0,r1,18.0,100,50.0,2.0,0', 's0,r1,1.0,1000,1000.0,0.0,0'], 'transitSubnet': '172.31.0.0/16', 'changeNetem': 'false'}
+2026-09-14 20:39:21,204 [INFO] __init__: Initializing GenericTopo...
+2026-09-14 20:39:21,204 [INFO] apply_topo: Using topo Generic Multi-Router Topology (Routers: 2, Hosts: 2)
+2026-09-14 20:39:21,204 [INFO] apply_topo_config: Using topo config <topos.generic.GenericConfig object at 0x7f96ed361c90>
+2026-09-14 20:39:21,696 [INFO] disable_tso: Disable TSO, GSO and GRO on all interfaces of all nodes
+2026-09-14 20:39:21,787 [INFO] configure_interfaces: Configuring interfaces for GenericConfig...
+2026-09-14 20:39:21,787 [INFO] configure_bottleneck: tc qdisc del dev bs_l_0_1-eth1 root; tc qdisc del dev bs_l_0_1-eth1 ingress 
+2026-09-14 20:39:21,791 [INFO] configure_bottleneck: tc qdisc del dev bs_l_0_1-eth2 root; tc qdisc del dev bs_l_0_1-eth2 ingress 
+2026-09-14 20:39:21,795 [INFO] configure_bottleneck: tc qdisc del dev bs_l_0_2-eth1 root; tc qdisc del dev bs_l_0_2-eth1 ingress 
+2026-09-14 20:39:21,799 [INFO] configure_bottleneck: tc qdisc del dev bs_l_0_2-eth2 root; tc qdisc del dev bs_l_0_2-eth2 ingress 
+2026-09-14 20:39:21,802 [INFO] configure_bottleneck: tc qdisc add dev bs_l_0_1-eth2 root handle 10: netem  delay 1.0ms limit 50000
+2026-09-14 20:39:21,804 [INFO] configure_bottleneck: tc qdisc add dev bs_l_0_2-eth2 root handle 1:0 tbf rate 1000.0mbit burst 15000 limit 1625500.0
+2026-09-14 20:39:21,807 [INFO] configure_bottleneck: tc qdisc add dev bs_l_0_2-eth1 root handle 10: netem  delay 1.0ms limit 50000
+2026-09-14 20:39:21,809 [INFO] configure_bottleneck: tc qdisc add dev bs_l_0_1-eth1 root handle 1:0 tbf rate 1000.0mbit burst 15000 limit 1625500.0
+2026-09-14 20:39:21,811 [INFO] configure_bottleneck: tc qdisc del dev bs_l_1_1-eth1 root; tc qdisc del dev bs_l_1_1-eth1 ingress 
+2026-09-14 20:39:21,815 [INFO] configure_bottleneck: tc qdisc del dev bs_l_1_1-eth2 root; tc qdisc del dev bs_l_1_1-eth2 ingress 
+2026-09-14 20:39:21,819 [INFO] configure_bottleneck: tc qdisc del dev bs_l_1_2-eth1 root; tc qdisc del dev bs_l_1_2-eth1 ingress 
+2026-09-14 20:39:21,823 [INFO] configure_bottleneck: tc qdisc del dev bs_l_1_2-eth2 root; tc qdisc del dev bs_l_1_2-eth2 ingress 
+2026-09-14 20:39:21,826 [INFO] configure_bottleneck: tc qdisc add dev bs_l_1_1-eth2 root handle 10: netem loss 2.0 delay 18.0ms limit 50000
+2026-09-14 20:39:21,829 [INFO] configure_bottleneck: tc qdisc add dev bs_l_1_2-eth2 root handle 1:0 tbf rate 50.0mbit burst 15000 limit 362500.0
+2026-09-14 20:39:21,831 [INFO] configure_bottleneck: tc qdisc add dev bs_l_1_2-eth1 root handle 10: netem loss 2.0 delay 18.0ms limit 50000
+2026-09-14 20:39:21,833 [INFO] configure_bottleneck: tc qdisc add dev bs_l_1_1-eth1 root handle 1:0 tbf rate 50.0mbit burst 15000 limit 362500.0
+2026-09-14 20:39:21,835 [INFO] configure_bottleneck: tc qdisc del dev bs_l_2_1-eth1 root; tc qdisc del dev bs_l_2_1-eth1 ingress 
+2026-09-14 20:39:21,839 [INFO] configure_bottleneck: tc qdisc del dev bs_l_2_1-eth2 root; tc qdisc del dev bs_l_2_1-eth2 ingress 
+2026-09-14 20:39:21,843 [INFO] configure_bottleneck: tc qdisc del dev bs_l_2_2-eth1 root; tc qdisc del dev bs_l_2_2-eth1 ingress 
+2026-09-14 20:39:21,846 [INFO] configure_bottleneck: tc qdisc del dev bs_l_2_2-eth2 root; tc qdisc del dev bs_l_2_2-eth2 ingress 
+2026-09-14 20:39:21,850 [INFO] configure_bottleneck: tc qdisc add dev bs_l_2_1-eth2 root handle 10: netem  delay 1.0ms limit 50000
+2026-09-14 20:39:21,852 [INFO] configure_bottleneck: tc qdisc add dev bs_l_2_2-eth2 root handle 1:0 tbf rate 1000.0mbit burst 15000 limit 1625500.0
+2026-09-14 20:39:21,855 [INFO] configure_bottleneck: tc qdisc add dev bs_l_2_2-eth1 root handle 10: netem  delay 1.0ms limit 50000
+2026-09-14 20:39:21,857 [INFO] configure_bottleneck: tc qdisc add dev bs_l_2_1-eth1 root handle 1:0 tbf rate 1000.0mbit burst 15000 limit 1625500.0
+2026-09-14 20:39:21,884 [INFO] configure_routing: Configuring routing for GenericConfig...
+2026-09-14 20:39:21,888 [INFO] __init__: Saving experiment outputs to /home/user/Desktop/test/gaia-experiment-main/output/test/xp_test_hol_h3_l2/rep1
+2026-09-14 20:39:21,890 [ERROR] command_global: Got error (rc=255) when running cmd: 'sysctl net.mptcp.mptcp_path_manager', stderr: 'sysctl: cannot stat /proc/sys/net/mptcp/mptcp_path_manager: No such file or directory'
+2026-09-14 20:39:21,891 [INFO] setup_sysctl: Detected MPTCP generation: UPSTREAM
+2026-09-14 20:39:21,895 [WARNING] _save_sysctl: Unable to read sysctl net.mptcp.path_manager (ns=True, who=c0)
+2026-09-14 20:39:21,896 [WARNING] _save_sysctl: Unable to read sysctl net.mptcp.path_manager (ns=True, who=s0)
+2026-09-14 20:39:21,908 [INFO] run_netem_at: No need to change netem
+2026-09-14 20:39:21,908 [INFO] prepare: Preparing WorkloadExp...
+2026-09-14 20:39:21,909 [INFO] run: Running WorkloadExp...
+2026-09-14 20:39:58,580 [INFO] clean: Cleaning up WorkloadExp...
+2026-09-14 20:39:59,679 [INFO] main: cleanup mininet
+Execution complete. Summary: Valid Custom Workload; UnappliedParams(2) (Goodput: N/A)

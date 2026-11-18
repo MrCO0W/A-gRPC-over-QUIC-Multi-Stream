@@ -1,0 +1,299 @@
+nohup: ignoring input
+gaia      : /home/user/Desktop/gaia-experiment-main
+rpcbench  : /home/user/Desktop/test/rpcbench
+repeats   : 3
+only      : ^xp_test_ctrl_(idle_(poll_h1_i1000|poll_h1_i100|lpoll_h2|lpoll_h3|sse_h2|sse_h3|grpc_h2|grpc_h3)_l[05]|busy_(poll_h1_i1000|poll_h1_i100|lpoll_h2|lpoll_h3|sse_h2|sse_h3|grpc_h2|grpc_h3)_l[0125])$
+output    : /home/user/Desktop/gaia-experiment-main/output/test_ctrl
+
+== preflight topo_test_l0
+   WARNING preflight did not pass for /home/user/Desktop/gaia-experiment-main/config/topo/topo_test_l0 (continuing; high loss can trip it)
+== preflight topo_test_l1
+== preflight topo_test_l2
+== preflight topo_test_l5
+
+[1/48 rep1] xp_test_ctrl_idle_poll_h1_i1000_l0 - already done, skipping
+[1/48 rep2] xp_test_ctrl_idle_poll_h1_i1000_l0 - already done, skipping
+[1/48 rep3] xp_test_ctrl_idle_poll_h1_i1000_l0 - already done, skipping
+[2/48 rep1] xp_test_ctrl_idle_poll_h1_i100_l0 - already done, skipping
+[2/48 rep2] xp_test_ctrl_idle_poll_h1_i100_l0 - already done, skipping
+[2/48 rep3] xp_test_ctrl_idle_poll_h1_i100_l0 - already done, skipping
+[3/48 rep1] xp_test_ctrl_idle_lpoll_h2_l0
+  ok  delivered= 170/170   lat_p50=    21.3 ms  lat_p99=    61.6 ms  confirm_p99=    82.5 ms  req/cmd= 1.91  (43s)
+[3/48 rep2] xp_test_ctrl_idle_lpoll_h2_l0
+  ok  delivered= 170/170   lat_p50=    21.2 ms  lat_p99=    62.0 ms  confirm_p99=    83.0 ms  req/cmd= 1.91  (42s)
+[3/48 rep3] xp_test_ctrl_idle_lpoll_h2_l0
+  ok  delivered= 170/170   lat_p50=    21.2 ms  lat_p99=    61.7 ms  confirm_p99=    82.7 ms  req/cmd= 1.91  (43s)
+[4/48 rep1] xp_test_ctrl_idle_lpoll_h3_l0
+  ok  delivered= 170/170   lat_p50=    21.2 ms  lat_p99=    60.5 ms  confirm_p99=    81.7 ms  req/cmd= 1.92  (42s)
+[4/48 rep2] xp_test_ctrl_idle_lpoll_h3_l0
+  ok  delivered= 170/170   lat_p50=    21.2 ms  lat_p99=    61.9 ms  confirm_p99=    82.9 ms  req/cmd= 1.91  (43s)
+[4/48 rep3] xp_test_ctrl_idle_lpoll_h3_l0
+  ok  delivered= 170/170   lat_p50=    21.2 ms  lat_p99=    60.5 ms  confirm_p99=    81.6 ms  req/cmd= 1.91  (42s)
+[5/48 rep1] xp_test_ctrl_idle_sse_h2_l0
+  ok  delivered= 170/170   lat_p50=    20.8 ms  lat_p99=    21.2 ms  confirm_p99=    42.4 ms  req/cmd= 0.98  (42s)
+[5/48 rep2] xp_test_ctrl_idle_sse_h2_l0
+  ok  delivered= 170/170   lat_p50=    20.8 ms  lat_p99=    21.1 ms  confirm_p99=    42.3 ms  req/cmd= 0.98  (42s)
+[5/48 rep3] xp_test_ctrl_idle_sse_h2_l0
+  ok  delivered= 170/170   lat_p50=    20.8 ms  lat_p99=    21.2 ms  confirm_p99=    42.4 ms  req/cmd= 0.98  (43s)
+[6/48 rep1] xp_test_ctrl_idle_sse_h3_l0
+  ok  delivered= 170/170   lat_p50=    20.9 ms  lat_p99=    21.3 ms  confirm_p99=    43.0 ms  req/cmd= 0.99  (42s)
+[6/48 rep2] xp_test_ctrl_idle_sse_h3_l0
+  ok  delivered= 170/170   lat_p50=    20.9 ms  lat_p99=    21.2 ms  confirm_p99=    42.8 ms  req/cmd= 0.98  (42s)
+[6/48 rep3] xp_test_ctrl_idle_sse_h3_l0
+  ok  delivered= 170/170   lat_p50=    20.9 ms  lat_p99=    21.3 ms  confirm_p99=    42.8 ms  req/cmd= 0.98  (43s)
+[7/48 rep1] xp_test_ctrl_idle_grpc_h2_l0
+  ok  delivered= 170/170   lat_p50=    20.7 ms  lat_p99=    21.0 ms  confirm_p99=    42.0 ms  req/cmd= 0.00  (42s)
+[7/48 rep2] xp_test_ctrl_idle_grpc_h2_l0
+  ok  delivered= 170/170   lat_p50=    20.7 ms  lat_p99=    21.0 ms  confirm_p99=    42.0 ms  req/cmd= 0.00  (43s)
+[7/48 rep3] xp_test_ctrl_idle_grpc_h2_l0
+  ok  delivered= 170/170   lat_p50=    20.7 ms  lat_p99=    21.0 ms  confirm_p99=    42.0 ms  req/cmd= 0.00  (42s)
+[8/48 rep1] xp_test_ctrl_idle_grpc_h3_l0
+  ok  delivered= 170/170   lat_p50=    20.8 ms  lat_p99=    21.2 ms  confirm_p99=    42.3 ms  req/cmd= 0.00  (43s)
+[8/48 rep2] xp_test_ctrl_idle_grpc_h3_l0
+  ok  delivered= 170/170   lat_p50=    20.8 ms  lat_p99=    21.2 ms  confirm_p99=    42.2 ms  req/cmd= 0.00  (42s)
+[8/48 rep3] xp_test_ctrl_idle_grpc_h3_l0
+  ok  delivered= 170/170   lat_p50=    20.8 ms  lat_p99=    21.2 ms  confirm_p99=    42.2 ms  req/cmd= 0.00  (43s)
+[9/48 rep1] xp_test_ctrl_idle_poll_h1_i1000_l5
+  ok  delivered= 170/170   lat_p50=   574.3 ms  lat_p99=  1012.6 ms  confirm_p99=  1217.1 ms  req/cmd= 0.35  (43s)
+[9/48 rep2] xp_test_ctrl_idle_poll_h1_i1000_l5
+  ok  delivered= 156/156   lat_p50=   504.0 ms  lat_p99=  2315.9 ms  confirm_p99=  2336.3 ms  req/cmd= 0.37  (44s)
+[9/48 rep3] xp_test_ctrl_idle_poll_h1_i1000_l5
+  ok  delivered= 163/163   lat_p50=   650.6 ms  lat_p99=  1236.5 ms  confirm_p99=  1257.3 ms  req/cmd= 0.37  (43s)
+[10/48 rep1] xp_test_ctrl_idle_poll_h1_i100_l5
+  ok  delivered= 170/170   lat_p50=    72.5 ms  lat_p99=   343.3 ms  confirm_p99=   602.2 ms  req/cmd= 2.15  (42s)
+[10/48 rep2] xp_test_ctrl_idle_poll_h1_i100_l5
+  ok  delivered= 170/170   lat_p50=    80.0 ms  lat_p99=   437.2 ms  confirm_p99=   534.1 ms  req/cmd= 2.15  (43s)
+[10/48 rep3] xp_test_ctrl_idle_poll_h1_i100_l5
+  ok  delivered= 157/157   lat_p50=    91.2 ms  lat_p99=   664.3 ms  confirm_p99=   684.9 ms  req/cmd= 2.12  (43s)
+[11/48 rep1] xp_test_ctrl_idle_lpoll_h2_l5
+  ok  delivered= 170/170   lat_p50=    57.6 ms  lat_p99=   524.8 ms  confirm_p99=   545.8 ms  req/cmd= 1.62  (42s)
+[11/48 rep2] xp_test_ctrl_idle_lpoll_h2_l5
+  ok  delivered= 170/170   lat_p50=    21.4 ms  lat_p99=   350.2 ms  confirm_p99=   554.2 ms  req/cmd= 1.75  (45s)
+[11/48 rep3] xp_test_ctrl_idle_lpoll_h2_l5
+  ok  delivered= 170/170   lat_p50=    21.5 ms  lat_p99=   378.6 ms  confirm_p99=   484.3 ms  req/cmd= 1.75  (42s)
+[12/48 rep1] xp_test_ctrl_idle_lpoll_h3_l5
+  ok  delivered= 170/170   lat_p50=    21.2 ms  lat_p99=   136.5 ms  confirm_p99=   157.5 ms  req/cmd= 1.88  (43s)
+[12/48 rep2] xp_test_ctrl_idle_lpoll_h3_l5
+  ok  delivered= 170/170   lat_p50=    21.3 ms  lat_p99=   131.8 ms  confirm_p99=   158.8 ms  req/cmd= 1.85  (42s)
+[12/48 rep3] xp_test_ctrl_idle_lpoll_h3_l5
+  ok  delivered= 168/168   lat_p50=    21.3 ms  lat_p99=   117.4 ms  confirm_p99=   162.5 ms  req/cmd= 1.88  (43s)
+[13/48 rep1] xp_test_ctrl_idle_sse_h2_l5
+  ok  delivered= 170/170   lat_p50=    20.9 ms  lat_p99=   382.2 ms  confirm_p99=   403.4 ms  req/cmd= 0.89  (42s)
+[13/48 rep2] xp_test_ctrl_idle_sse_h2_l5
+  ok  delivered= 170/170   lat_p50=    20.8 ms  lat_p99=   221.0 ms  confirm_p99=   371.4 ms  req/cmd= 0.94  (43s)
+[13/48 rep3] xp_test_ctrl_idle_sse_h2_l5
+  ok  delivered= 170/170   lat_p50=    20.9 ms  lat_p99=   180.6 ms  confirm_p99=   348.9 ms  req/cmd= 0.96  (42s)
+[14/48 rep1] xp_test_ctrl_idle_sse_h3_l5
+  ok  delivered= 170/170   lat_p50=    20.9 ms  lat_p99=   103.8 ms  confirm_p99=   139.6 ms  req/cmd= 0.96  (43s)
+[14/48 rep2] xp_test_ctrl_idle_sse_h3_l5
+  ok  delivered= 170/170   lat_p50=    20.9 ms  lat_p99=    89.6 ms  confirm_p99=   117.5 ms  req/cmd= 0.98  (42s)
+[14/48 rep3] xp_test_ctrl_idle_sse_h3_l5
+  ok  delivered= 170/170   lat_p50=    20.9 ms  lat_p99=    90.1 ms  confirm_p99=   111.5 ms  req/cmd= 0.97  (43s)
+[15/48 rep1] xp_test_ctrl_idle_grpc_h2_l5
+  ok  delivered= 162/162   lat_p50=    20.8 ms  lat_p99=   305.4 ms  confirm_p99=   374.9 ms  req/cmd= 0.00  (42s)
+[15/48 rep2] xp_test_ctrl_idle_grpc_h2_l5
+  ok  delivered= 161/161   lat_p50=    20.8 ms  lat_p99=   180.9 ms  confirm_p99=   264.9 ms  req/cmd= 0.00  (43s)
+[15/48 rep3] xp_test_ctrl_idle_grpc_h2_l5
+  ok  delivered= 168/168   lat_p50=    20.8 ms  lat_p99=   272.7 ms  confirm_p99=   392.5 ms  req/cmd= 0.00  (42s)
+[16/48 rep1] xp_test_ctrl_idle_grpc_h3_l5
+  ok  delivered= 170/170   lat_p50=    20.8 ms  lat_p99=   119.4 ms  confirm_p99=   210.6 ms  req/cmd= 0.00  (43s)
+[16/48 rep2] xp_test_ctrl_idle_grpc_h3_l5
+  ok  delivered= 170/170   lat_p50=    20.9 ms  lat_p99=   130.4 ms  confirm_p99=   164.2 ms  req/cmd= 0.00  (42s)
+[16/48 rep3] xp_test_ctrl_idle_grpc_h3_l5
+  ok  delivered= 169/169   lat_p50=    20.8 ms  lat_p99=    90.3 ms  confirm_p99=   156.1 ms  req/cmd= 0.00  (42s)
+[17/48 rep1] xp_test_ctrl_busy_poll_h1_i1000_l0
+  ok  delivered= 170/170   lat_p50=   536.2 ms  lat_p99=   987.9 ms  confirm_p99=  1008.6 ms  req/cmd= 0.35  (42s)
+[17/48 rep2] xp_test_ctrl_busy_poll_h1_i1000_l0
+  ok  delivered= 170/170   lat_p50=   540.2 ms  lat_p99=   987.3 ms  confirm_p99=  1008.1 ms  req/cmd= 0.35  (42s)
+[17/48 rep3] xp_test_ctrl_busy_poll_h1_i1000_l0
+  ok  delivered= 170/170   lat_p50=   538.9 ms  lat_p99=   988.7 ms  confirm_p99=  1009.5 ms  req/cmd= 0.35  (43s)
+[18/48 rep1] xp_test_ctrl_busy_poll_h1_i100_l0
+  ok  delivered= 170/170   lat_p50=    64.8 ms  lat_p99=   121.0 ms  confirm_p99=   141.7 ms  req/cmd= 2.49  (42s)
+[18/48 rep2] xp_test_ctrl_busy_poll_h1_i100_l0
+  ok  delivered= 170/170   lat_p50=    61.7 ms  lat_p99=   117.8 ms  confirm_p99=   138.3 ms  req/cmd= 2.49  (43s)
+[18/48 rep3] xp_test_ctrl_busy_poll_h1_i100_l0
+  ok  delivered= 170/170   lat_p50=    64.4 ms  lat_p99=   120.9 ms  confirm_p99=   141.6 ms  req/cmd= 2.48  (42s)
+[19/48 rep1] xp_test_ctrl_busy_lpoll_h2_l0
+  ok  delivered= 170/170   lat_p50=    21.1 ms  lat_p99=    61.6 ms  confirm_p99=    82.9 ms  req/cmd= 1.91  (43s)
+[19/48 rep2] xp_test_ctrl_busy_lpoll_h2_l0
+  ok  delivered= 170/170   lat_p50=    21.0 ms  lat_p99=    61.3 ms  confirm_p99=    82.2 ms  req/cmd= 1.91  (42s)
+[19/48 rep3] xp_test_ctrl_busy_lpoll_h2_l0
+  ok  delivered= 170/170   lat_p50=    21.0 ms  lat_p99=    62.3 ms  confirm_p99=    83.2 ms  req/cmd= 1.94  (43s)
+[20/48 rep1] xp_test_ctrl_busy_lpoll_h3_l0
+  ok  delivered= 170/170   lat_p50=    21.1 ms  lat_p99=    60.3 ms  confirm_p99=    81.3 ms  req/cmd= 1.91  (42s)
+[20/48 rep2] xp_test_ctrl_busy_lpoll_h3_l0
+  ok  delivered= 170/170   lat_p50=    21.1 ms  lat_p99=    60.8 ms  confirm_p99=    81.9 ms  req/cmd= 1.91  (43s)
+[20/48 rep3] xp_test_ctrl_busy_lpoll_h3_l0
+  ok  delivered= 170/170   lat_p50=    21.1 ms  lat_p99=    60.6 ms  confirm_p99=    81.4 ms  req/cmd= 1.89  (42s)
+[21/48 rep1] xp_test_ctrl_busy_sse_h2_l0
+  ok  delivered= 170/170   lat_p50=    20.7 ms  lat_p99=    21.2 ms  confirm_p99=    42.5 ms  req/cmd= 0.98  (42s)
+[21/48 rep2] xp_test_ctrl_busy_sse_h2_l0
+  ok  delivered= 170/170   lat_p50=    20.7 ms  lat_p99=    21.2 ms  confirm_p99=    42.4 ms  req/cmd= 0.98  (43s)
+[21/48 rep3] xp_test_ctrl_busy_sse_h2_l0
+  ok  delivered= 170/170   lat_p50=    20.7 ms  lat_p99=    21.2 ms  confirm_p99=    42.4 ms  req/cmd= 0.99  (42s)
+[22/48 rep1] xp_test_ctrl_busy_sse_h3_l0
+  ok  delivered= 170/170   lat_p50=    20.8 ms  lat_p99=    21.3 ms  confirm_p99=    42.7 ms  req/cmd= 0.98  (43s)
+[22/48 rep2] xp_test_ctrl_busy_sse_h3_l0
+  ok  delivered= 170/170   lat_p50=    20.8 ms  lat_p99=    21.2 ms  confirm_p99=    42.7 ms  req/cmd= 0.99  (42s)
+[22/48 rep3] xp_test_ctrl_busy_sse_h3_l0
+  ok  delivered= 170/170   lat_p50=    20.8 ms  lat_p99=    21.4 ms  confirm_p99=    42.9 ms  req/cmd= 0.99  (43s)
+[23/48 rep1] xp_test_ctrl_busy_grpc_h2_l0
+  ok  delivered= 170/170   lat_p50=    20.6 ms  lat_p99=    21.0 ms  confirm_p99=    41.9 ms  req/cmd= 0.00  (42s)
+[23/48 rep2] xp_test_ctrl_busy_grpc_h2_l0
+  ok  delivered= 170/170   lat_p50=    20.6 ms  lat_p99=    21.0 ms  confirm_p99=    42.0 ms  req/cmd= 0.00  (43s)
+[23/48 rep3] xp_test_ctrl_busy_grpc_h2_l0
+  ok  delivered= 170/170   lat_p50=    20.6 ms  lat_p99=    21.0 ms  confirm_p99=    41.9 ms  req/cmd= 0.00  (42s)
+[24/48 rep1] xp_test_ctrl_busy_grpc_h3_l0
+  ok  delivered= 170/170   lat_p50=    20.7 ms  lat_p99=    21.2 ms  confirm_p99=    42.2 ms  req/cmd= 0.00  (43s)
+[24/48 rep2] xp_test_ctrl_busy_grpc_h3_l0
+  ok  delivered= 170/170   lat_p50=    20.7 ms  lat_p99=    21.2 ms  confirm_p99=    42.3 ms  req/cmd= 0.00  (42s)
+[24/48 rep3] xp_test_ctrl_busy_grpc_h3_l0
+  ok  delivered= 170/170   lat_p50=    20.7 ms  lat_p99=    21.3 ms  confirm_p99=    42.3 ms  req/cmd= 0.00  (43s)
+[25/48 rep1] xp_test_ctrl_busy_poll_h1_i1000_l1
+  ok  delivered= 170/170   lat_p50=   542.2 ms  lat_p99=   990.0 ms  confirm_p99=  1010.7 ms  req/cmd= 0.35  (42s)
+[25/48 rep2] xp_test_ctrl_busy_poll_h1_i1000_l1
+  ok  delivered= 170/170   lat_p50=   561.0 ms  lat_p99=   995.8 ms  confirm_p99=  1016.4 ms  req/cmd= 0.35  (43s)
+[25/48 rep3] xp_test_ctrl_busy_poll_h1_i1000_l1
+  ok  delivered= 170/170   lat_p50=   540.0 ms  lat_p99=   989.3 ms  confirm_p99=  1041.3 ms  req/cmd= 0.35  (42s)
+[26/48 rep1] xp_test_ctrl_busy_poll_h1_i100_l1
+  ok  delivered= 170/170   lat_p50=    71.6 ms  lat_p99=   338.9 ms  confirm_p99=   365.2 ms  req/cmd= 2.44  (43s)
+[26/48 rep2] xp_test_ctrl_busy_poll_h1_i100_l1
+  ok  delivered= 170/170   lat_p50=    67.9 ms  lat_p99=   289.0 ms  confirm_p99=   356.5 ms  req/cmd= 2.44  (42s)
+[26/48 rep3] xp_test_ctrl_busy_poll_h1_i100_l1
+  ok  delivered= 170/170   lat_p50=    78.3 ms  lat_p99=   299.1 ms  confirm_p99=   319.9 ms  req/cmd= 2.35  (43s)
+[27/48 rep1] xp_test_ctrl_busy_lpoll_h2_l1
+  ok  delivered= 170/170   lat_p50=    33.9 ms  lat_p99=   128.1 ms  confirm_p99=   161.0 ms  req/cmd= 1.82  (42s)
+[27/48 rep2] xp_test_ctrl_busy_lpoll_h2_l1
+  ok  delivered= 168/168   lat_p50=    31.2 ms  lat_p99=   125.4 ms  confirm_p99=   191.8 ms  req/cmd= 1.83  (43s)
+[27/48 rep3] xp_test_ctrl_busy_lpoll_h2_l1
+  ok  delivered= 170/170   lat_p50=    33.9 ms  lat_p99=   116.2 ms  confirm_p99=   188.1 ms  req/cmd= 1.82  (42s)
+[28/48 rep1] xp_test_ctrl_busy_lpoll_h3_l1
+  ok  delivered= 170/170   lat_p50=    21.0 ms  lat_p99=    93.4 ms  confirm_p99=   122.4 ms  req/cmd= 1.92  (43s)
+[28/48 rep2] xp_test_ctrl_busy_lpoll_h3_l1
+  ok  delivered= 170/170   lat_p50=    21.1 ms  lat_p99=    81.8 ms  confirm_p99=   103.1 ms  req/cmd= 1.89  (42s)
+[28/48 rep3] xp_test_ctrl_busy_lpoll_h3_l1
+  ok  delivered= 169/169   lat_p50=    21.1 ms  lat_p99=    67.9 ms  confirm_p99=    89.2 ms  req/cmd= 1.92  (43s)
+[29/48 rep1] xp_test_ctrl_busy_sse_h2_l1
+  ok  delivered= 169/169   lat_p50=    21.0 ms  lat_p99=    84.4 ms  confirm_p99=   146.3 ms  req/cmd= 0.96  (42s)
+[29/48 rep2] xp_test_ctrl_busy_sse_h2_l1
+  ok  delivered= 168/168   lat_p50=    20.8 ms  lat_p99=    75.1 ms  confirm_p99=   107.4 ms  req/cmd= 0.96  (42s)
+[29/48 rep3] xp_test_ctrl_busy_sse_h2_l1
+  ok  delivered= 170/170   lat_p50=    20.8 ms  lat_p99=    64.3 ms  confirm_p99=   121.0 ms  req/cmd= 0.95  (43s)
+[30/48 rep1] xp_test_ctrl_busy_sse_h3_l1
+  ok  delivered= 170/170   lat_p50=    20.8 ms  lat_p99=    21.2 ms  confirm_p99=    81.1 ms  req/cmd= 0.98  (42s)
+[30/48 rep2] xp_test_ctrl_busy_sse_h3_l1
+  ok  delivered= 170/170   lat_p50=    20.8 ms  lat_p99=    65.6 ms  confirm_p99=    92.9 ms  req/cmd= 0.97  (43s)
+[30/48 rep3] xp_test_ctrl_busy_sse_h3_l1
+  ok  delivered= 170/170   lat_p50=    20.7 ms  lat_p99=    40.4 ms  confirm_p99=    98.6 ms  req/cmd= 0.99  (42s)
+[31/48 rep1] xp_test_ctrl_busy_grpc_h2_l1
+  ok  delivered= 170/170   lat_p50=    20.7 ms  lat_p99=    70.4 ms  confirm_p99=   117.7 ms  req/cmd= 0.00  (43s)
+[31/48 rep2] xp_test_ctrl_busy_grpc_h2_l1
+  ok  delivered= 170/170   lat_p50=    20.6 ms  lat_p99=    74.0 ms  confirm_p99=   129.6 ms  req/cmd= 0.00  (42s)
+[31/48 rep3] xp_test_ctrl_busy_grpc_h2_l1
+  ok  delivered= 170/170   lat_p50=    20.7 ms  lat_p99=    75.5 ms  confirm_p99=   125.5 ms  req/cmd= 0.00  (43s)
+[32/48 rep1] xp_test_ctrl_busy_grpc_h3_l1
+  ok  delivered= 170/170   lat_p50=    20.7 ms  lat_p99=    72.0 ms  confirm_p99=   115.5 ms  req/cmd= 0.00  (42s)
+[32/48 rep2] xp_test_ctrl_busy_grpc_h3_l1
+  ok  delivered= 170/170   lat_p50=    20.7 ms  lat_p99=    67.1 ms  confirm_p99=   115.5 ms  req/cmd= 0.00  (43s)
+[32/48 rep3] xp_test_ctrl_busy_grpc_h3_l1
+  ok  delivered= 170/170   lat_p50=    20.7 ms  lat_p99=    29.1 ms  confirm_p99=    89.8 ms  req/cmd= 0.00  (42s)
+[33/48 rep1] xp_test_ctrl_busy_poll_h1_i1000_l2
+  ok  delivered= 170/170   lat_p50=   547.5 ms  lat_p99=  1003.9 ms  confirm_p99=  1024.3 ms  req/cmd= 0.35  (43s)
+[33/48 rep2] xp_test_ctrl_busy_poll_h1_i1000_l2
+  ok  delivered= 170/170   lat_p50=   547.1 ms  lat_p99=  1034.2 ms  confirm_p99=  1061.1 ms  req/cmd= 0.35  (44s)
+[33/48 rep3] xp_test_ctrl_busy_poll_h1_i1000_l2
+  ok  delivered= 170/170   lat_p50=   540.0 ms  lat_p99=   988.8 ms  confirm_p99=  1009.5 ms  req/cmd= 0.35  (42s)
+[34/48 rep1] xp_test_ctrl_busy_poll_h1_i100_l2
+  ok  delivered= 170/170   lat_p50=    81.3 ms  lat_p99=   300.4 ms  confirm_p99=   328.7 ms  req/cmd= 2.44  (43s)
+[34/48 rep2] xp_test_ctrl_busy_poll_h1_i100_l2
+  ok  delivered= 170/170   lat_p50=    77.9 ms  lat_p99=   353.3 ms  confirm_p99=   377.7 ms  req/cmd= 2.31  (42s)
+[34/48 rep3] xp_test_ctrl_busy_poll_h1_i100_l2
+  ok  delivered= 170/170   lat_p50=    72.6 ms  lat_p99=   341.7 ms  confirm_p99=   380.4 ms  req/cmd= 2.38  (43s)
+[35/48 rep1] xp_test_ctrl_busy_lpoll_h2_l2
+  ok  delivered= 168/168   lat_p50=    42.3 ms  lat_p99=   165.7 ms  confirm_p99=   227.4 ms  req/cmd= 1.83  (42s)
+[35/48 rep2] xp_test_ctrl_busy_lpoll_h2_l2
+  ok  delivered= 170/170   lat_p50=    39.0 ms  lat_p99=   138.4 ms  confirm_p99=   245.8 ms  req/cmd= 1.76  (43s)
+[35/48 rep3] xp_test_ctrl_busy_lpoll_h2_l2
+  ok  delivered= 161/161   lat_p50=    32.7 ms  lat_p99=   122.8 ms  confirm_p99=   184.6 ms  req/cmd= 1.84  (43s)
+[36/48 rep1] xp_test_ctrl_busy_lpoll_h3_l2
+  ok  delivered= 170/170   lat_p50=    21.0 ms  lat_p99=   110.5 ms  confirm_p99=   139.1 ms  req/cmd= 1.91  (42s)
+[36/48 rep2] xp_test_ctrl_busy_lpoll_h3_l2
+  ok  delivered= 170/170   lat_p50=    21.0 ms  lat_p99=    82.0 ms  confirm_p99=   127.1 ms  req/cmd= 1.89  (42s)
+[36/48 rep3] xp_test_ctrl_busy_lpoll_h3_l2
+  ok  delivered= 170/170   lat_p50=    21.0 ms  lat_p99=   110.5 ms  confirm_p99=   144.1 ms  req/cmd= 1.87  (43s)
+[37/48 rep1] xp_test_ctrl_busy_sse_h2_l2
+  ok  delivered= 170/170   lat_p50=    20.9 ms  lat_p99=    90.2 ms  confirm_p99=   141.8 ms  req/cmd= 0.95  (42s)
+[37/48 rep2] xp_test_ctrl_busy_sse_h2_l2
+  ok  delivered= 170/170   lat_p50=    22.1 ms  lat_p99=    92.8 ms  confirm_p99=   189.6 ms  req/cmd= 0.93  (42s)
+[37/48 rep3] xp_test_ctrl_busy_sse_h2_l2
+  ok  delivered= 169/169   lat_p50=    21.1 ms  lat_p99=    88.1 ms  confirm_p99=   146.7 ms  req/cmd= 0.93  (42s)
+[38/48 rep1] xp_test_ctrl_busy_sse_h3_l2
+  ok  delivered= 170/170   lat_p50=    20.8 ms  lat_p99=    76.6 ms  confirm_p99=   115.9 ms  req/cmd= 0.98  (43s)
+[38/48 rep2] xp_test_ctrl_busy_sse_h3_l2
+  ok  delivered= 170/170   lat_p50=    20.8 ms  lat_p99=    64.8 ms  confirm_p99=   107.5 ms  req/cmd= 0.96  (42s)
+[38/48 rep3] xp_test_ctrl_busy_sse_h3_l2
+  ok  delivered= 170/170   lat_p50=    20.8 ms  lat_p99=    74.2 ms  confirm_p99=   102.2 ms  req/cmd= 0.97  (43s)
+[39/48 rep1] xp_test_ctrl_busy_grpc_h2_l2
+  ok  delivered= 170/170   lat_p50=    20.7 ms  lat_p99=    70.0 ms  confirm_p99=   124.2 ms  req/cmd= 0.00  (42s)
+[39/48 rep2] xp_test_ctrl_busy_grpc_h2_l2
+  ok  delivered= 170/170   lat_p50=    20.7 ms  lat_p99=    92.6 ms  confirm_p99=   194.3 ms  req/cmd= 0.00  (43s)
+[39/48 rep3] xp_test_ctrl_busy_grpc_h2_l2
+  ok  delivered= 170/170   lat_p50=    20.7 ms  lat_p99=   109.0 ms  confirm_p99=   197.7 ms  req/cmd= 0.00  (42s)
+[40/48 rep1] xp_test_ctrl_busy_grpc_h3_l2
+  ok  delivered= 170/170   lat_p50=    20.7 ms  lat_p99=    82.9 ms  confirm_p99=   104.0 ms  req/cmd= 0.00  (43s)
+[40/48 rep2] xp_test_ctrl_busy_grpc_h3_l2
+  ok  delivered= 170/170   lat_p50=    20.7 ms  lat_p99=    78.7 ms  confirm_p99=   113.0 ms  req/cmd= 0.00  (42s)
+[40/48 rep3] xp_test_ctrl_busy_grpc_h3_l2
+  ok  delivered= 168/168   lat_p50=    20.7 ms  lat_p99=    73.0 ms  confirm_p99=   105.3 ms  req/cmd= 0.00  (43s)
+[41/48 rep1] xp_test_ctrl_busy_poll_h1_i1000_l5
+  ok  delivered= 170/170   lat_p50=   430.6 ms  lat_p99=  1006.9 ms  confirm_p99=  1075.8 ms  req/cmd= 0.35  (43s)
+[41/48 rep2] xp_test_ctrl_busy_poll_h1_i1000_l5
+  ok  delivered= 170/170   lat_p50=   575.3 ms  lat_p99=  1148.4 ms  confirm_p99=  1243.0 ms  req/cmd= 0.35  (43s)
+[41/48 rep3] xp_test_ctrl_busy_poll_h1_i1000_l5
+  ok  delivered= 170/170   lat_p50=   548.3 ms  lat_p99=  1213.5 ms  confirm_p99=  1234.3 ms  req/cmd= 0.35  (42s)
+[42/48 rep1] xp_test_ctrl_busy_poll_h1_i100_l5
+  ok  delivered= 169/169   lat_p50=    98.9 ms  lat_p99=   467.0 ms  confirm_p99=   545.9 ms  req/cmd= 2.09  (43s)
+[42/48 rep2] xp_test_ctrl_busy_poll_h1_i100_l5
+  ok  delivered= 170/170   lat_p50=   108.4 ms  lat_p99=   906.7 ms  confirm_p99=  1175.9 ms  req/cmd= 1.85  (43s)
+[42/48 rep3] xp_test_ctrl_busy_poll_h1_i100_l5
+  ok  delivered= 169/169   lat_p50=    85.5 ms  lat_p99=   624.9 ms  confirm_p99=   645.6 ms  req/cmd= 2.12  (42s)
+[43/48 rep1] xp_test_ctrl_busy_lpoll_h2_l5
+  ok  delivered= 170/170   lat_p50=    58.5 ms  lat_p99=   327.8 ms  confirm_p99=   495.6 ms  req/cmd= 1.62  (43s)
+[43/48 rep2] xp_test_ctrl_busy_lpoll_h2_l5
+  ok  delivered= 170/170   lat_p50=    54.6 ms  lat_p99=   409.0 ms  confirm_p99=   497.1 ms  req/cmd= 1.68  (42s)
+[43/48 rep3] xp_test_ctrl_busy_lpoll_h2_l5
+  ok  delivered= 161/161   lat_p50=    53.5 ms  lat_p99=   315.0 ms  confirm_p99=   406.4 ms  req/cmd= 1.71  (43s)
+[44/48 rep1] xp_test_ctrl_busy_lpoll_h3_l5
+  ok  delivered= 170/170   lat_p50=    21.1 ms  lat_p99=   124.8 ms  confirm_p99=   216.0 ms  req/cmd= 1.86  (42s)
+[44/48 rep2] xp_test_ctrl_busy_lpoll_h3_l5
+  ok  delivered= 170/170   lat_p50=    21.0 ms  lat_p99=   117.6 ms  confirm_p99=   174.7 ms  req/cmd= 1.85  (42s)
+[44/48 rep3] xp_test_ctrl_busy_lpoll_h3_l5
+  ok  delivered= 168/168   lat_p50=    21.1 ms  lat_p99=   119.2 ms  confirm_p99=   151.6 ms  req/cmd= 1.88  (43s)
+[45/48 rep1] xp_test_ctrl_busy_sse_h2_l5
+  ok  delivered= 161/161   lat_p50=    32.5 ms  lat_p99=    95.1 ms  confirm_p99=   214.0 ms  req/cmd= 0.92  (42s)
+[45/48 rep2] xp_test_ctrl_busy_sse_h2_l5
+  ok  delivered= 170/170   lat_p50=    33.9 ms  lat_p99=   218.2 ms  confirm_p99=   290.4 ms  req/cmd= 0.89  (43s)
+[45/48 rep3] xp_test_ctrl_busy_sse_h2_l5
+  ok  delivered= 170/170   lat_p50=    33.2 ms  lat_p99=   218.3 ms  confirm_p99=   656.7 ms  req/cmd= 0.88  (42s)
+[46/48 rep1] xp_test_ctrl_busy_sse_h3_l5
+  ok  delivered= 170/170   lat_p50=    20.8 ms  lat_p99=    81.7 ms  confirm_p99=   123.6 ms  req/cmd= 0.99  (43s)
+[46/48 rep2] xp_test_ctrl_busy_sse_h3_l5
+  ok  delivered= 170/170   lat_p50=    20.8 ms  lat_p99=    80.9 ms  confirm_p99=   122.3 ms  req/cmd= 0.96  (44s)
+[46/48 rep3] xp_test_ctrl_busy_sse_h3_l5
+  ok  delivered= 170/170   lat_p50=    20.8 ms  lat_p99=    78.8 ms  confirm_p99=   115.3 ms  req/cmd= 0.96  (42s)
+[47/48 rep1] xp_test_ctrl_busy_grpc_h2_l5
+  ok  delivered= 169/169   lat_p50=    25.1 ms  lat_p99=    95.6 ms  confirm_p99=   246.8 ms  req/cmd= 0.00  (43s)
+[47/48 rep2] xp_test_ctrl_busy_grpc_h2_l5
+  ok  delivered= 170/170   lat_p50=    27.9 ms  lat_p99=   284.1 ms  confirm_p99=   341.2 ms  req/cmd= 0.00  (42s)
+[47/48 rep3] xp_test_ctrl_busy_grpc_h2_l5
+  ok  delivered= 170/170   lat_p50=    21.2 ms  lat_p99=   330.1 ms  confirm_p99=   391.9 ms  req/cmd= 0.00  (43s)
+[48/48 rep1] xp_test_ctrl_busy_grpc_h3_l5
+  ok  delivered= 170/170   lat_p50=    20.7 ms  lat_p99=    89.5 ms  confirm_p99=   117.7 ms  req/cmd= 0.00  (42s)
+[48/48 rep2] xp_test_ctrl_busy_grpc_h3_l5
+  ok  delivered= 170/170   lat_p50=    20.7 ms  lat_p99=    89.5 ms  confirm_p99=   126.7 ms  req/cmd= 0.00  (43s)
+[48/48 rep3] xp_test_ctrl_busy_grpc_h3_l5
+  ok  delivered= 170/170   lat_p50=    20.7 ms  lat_p99=    96.0 ms  confirm_p99=   127.1 ms  req/cmd= 0.00  (42s)
+
+sweep finished: 144 runs, 0 failures
+summary: /home/user/Desktop/gaia-experiment-main/output/test_ctrl/sweep.log
+now run: python3 /home/user/Desktop/test/scripts/analyze_ctrl.py --results /home/user/Desktop/gaia-experiment-main/output/test_ctrl --out <report-dir>

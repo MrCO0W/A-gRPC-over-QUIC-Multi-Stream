@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="266" font-family="Helvetica, Arial, sans-serif" font-size="12">
+<rect width="760" height="266" fill="white"/>
+<text x="230" y="20" font-weight="bold">requests per command</text>
+<text x="505.0" y="20" font-weight="bold">bytes on the link per command</text>
+<text x="222" y="49" text-anchor="end">REST polling, HTTP/1.1, 1000 ms</text>
+<rect x="230" y="38" width="27.6" height="14" fill="#c9a227"/>
+<text x="261.6" y="49" fill="#333">0.35</text>
+<rect x="505.0" y="38" width="54.5" height="14" fill="#c9a227"/>
+<text x="563.5" y="49" fill="#333">529</text>
+<text x="222" y="71" text-anchor="end">REST polling, HTTP/2, 1000 ms</text>
+<rect x="230" y="60" width="27.6" height="14" fill="#a07d10"/>
+<text x="261.6" y="71" fill="#333">0.35</text>
+<rect x="505.0" y="60" width="53.1" height="14" fill="#a07d10"/>
+<text x="562.1" y="71" fill="#333">515</text>
+<text x="222" y="93" text-anchor="end">REST polling, HTTP/3, 1000 ms</text>
+<rect x="230" y="82" width="27.6" height="14" fill="#6e5500"/>
+<text x="261.6" y="93" fill="#333">0.35</text>
+<rect x="505.0" y="82" width="52.2" height="14" fill="#6e5500"/>
+<text x="561.2" y="93" fill="#333">506</text>
+<text x="222" y="115" text-anchor="end">REST polling, HTTP/1.1, 100 ms</text>
+<rect x="230" y="104" width="195.0" height="14" fill="#f0a35e"/>
+<text x="429.0" y="115" fill="#333">2.49</text>
+<rect x="505.0" y="104" width="185.0" height="14" fill="#f0a35e"/>
+<text x="694.0" y="115" fill="#333">1794</text>
+<text x="222" y="137" text-anchor="end">REST long polling, HTTP/2</text>
+<rect x="230" y="126" width="149.0" height="14" fill="#4f86c6"/>
+<text x="383.0" y="137" fill="#333">1.91</text>
+<rect x="505.0" y="126" width="128.8" height="14" fill="#4f86c6"/>
+<text x="637.8" y="137" fill="#333">1249</text>
+<text x="222" y="159" text-anchor="end">REST long polling, HTTP/3</text>
+<rect x="230" y="148" width="149.0" height="14" fill="#2a5a96"/>
+<text x="383.0" y="159" fill="#333">1.91</text>
+<rect x="505.0" y="148" width="127.1" height="14" fill="#2a5a96"/>
+<text x="636.1" y="159" fill="#333">1233</text>
+<text x="222" y="181" text-anchor="end">REST + SSE, HTTP/2</text>
+<rect x="230" y="170" width="76.8" height="14" fill="#4e9a4a"/>
+<text x="310.8" y="181" fill="#333">0.98</text>
+<rect x="505.0" y="170" width="95.9" height="14" fill="#4e9a4a"/>
+<text x="604.9" y="181" fill="#333">929</text>
+<text x="222" y="203" text-anchor="end">REST + SSE, HTTP/3</text>
+<rect x="230" y="192" width="76.8" height="14" fill="#2e6b2b"/>
+<text x="310.8" y="203" fill="#333">0.98</text>
+<rect x="505.0" y="192" width="95.3" height="14" fill="#2e6b2b"/>
+<text x="604.3" y="203" fill="#333">924</text>
+<text x="222" y="225" text-anchor="end">gRPC stream, HTTP/2</text>
+<rect x="230" y="214" width="0.0" height="14" fill="#d1495b"/>
+<text x="234.0" y="225" fill="#333">0.00</text>
+<rect x="505.0" y="214" width="54.0" height="14" fill="#d1495b"/>
+<text x="563.0" y="225" fill="#333">523</text>
+<text x="222" y="247" text-anchor="end">gRPC stream, HTTP/3</text>
+<rect x="230" y="236" width="0.0" height="14" fill="#8b1e2f"/>
+<text x="234.0" y="247" fill="#333">0.00</text>
+<rect x="505.0" y="236" width="48.5" height="14" fill="#8b1e2f"/>
+<text x="557.5" y="247" fill="#333">471</text>
+</svg>

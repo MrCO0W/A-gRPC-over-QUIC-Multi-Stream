@@ -1,0 +1,20 @@
+{
+  "xp_type": "workload_exp",
+  "duration": 45,
+  "workloads": [
+    {
+      "index": 0,
+      "node": "s0",
+      "kind": "custom_server",
+      "raw_command": "/home/user/Desktop/test/rpcbench/bin/cloudgw -certs /home/user/Desktop/test/rpcbench/certs -bind 0.0.0.0 -modes grpcm",
+      "bound_command": "/home/user/Desktop/test/rpcbench/bin/cloudgw -certs /home/user/Desktop/test/rpcbench/certs -bind 0.0.0.0 -modes grpcm"
+    },
+    {
+      "index": 1,
+      "node": "c0",
+      "kind": "custom_client",
+      "raw_command": "/home/user/Desktop/test/rpcbench/bin/edgegw -server {server_ip:s0} -mode grpcm -streams 2 -batch 20 -pad 0 -inflight 1 -duration 30s -warmup 5s -ca /home/user/Desktop/test/rpcbench/certs/ca.pem -server-name 10.0.2.2 -label hol-grpcm-n2-loss0p5 -out {output_dir}/rpcbench.json -param loss_pct=0.5 -param regime=hol -param wan_bw_mbps=50.0 -param base_rtt_ms=40.0 -param streams=2",
+      "bound_command": "/home/user/Desktop/test/rpcbench/bin/edgegw -server 10.0.2.2 -mode grpcm -streams 2 -batch 20 -pad 0 -inflight 1 -duration 30s -warmup 5s -ca /home/user/Desktop/test/rpcbench/certs/ca.pem -server-name 10.0.2.2 -label hol-grpcm-n2-loss0p5 -out /home/user/Desktop/test/gaia-experiment-main/output/test/xp_test_hol_grpcm_n2_l0p5/rep7/rpcbench.json -param loss_pct=0.5 -param regime=hol -param wan_bw_mbps=50.0 -param base_rtt_ms=40.0 -param streams=2"
+    }
+  ]
+}

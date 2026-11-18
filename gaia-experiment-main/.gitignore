@@ -1,0 +1,44 @@
+*.pdf
+*.aux
+*.backup
+*.log
+*.bbl
+*.out
+*.blg
+*.pyc
+*~
+*.swp
+*.pcap
+*.xpl
+*.patch
+__pycache__
+dist
+output/*
+!output/.gitkeep
+
+# Paper-experiment application build artifacts (source under apps/ stays tracked)
+/apps/**/bin/
+/apps/**/build/
+/apps/**/*.o
+/apps/**/*.a
+/apps/**/*.so
+/apps/refer-code/
+AGENTS.md
+.agents/*
+!.agents/skills/
+.agents/skills/*
+!.agents/skills/gaia-topo-gen/
+!.agents/skills/gaia-scenario-gen/
+!.agents/skills/gaia-run-analyze/
+
+# >>> MAM managed block (managed by install.sh — do not edit) >>>
+/.venv/
+/.mam/
+/.mam_deploy/
+/.mam.env
+/.mam.env.*
+!/.mam.env.example
+/.cache/multi-agent-mux-monitor/
+/.mam-skill-backup.*/
+CURRENT_JOB.md
+# <<< MAM managed block <<<

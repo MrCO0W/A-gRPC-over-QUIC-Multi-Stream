@@ -1,0 +1,20 @@
+{
+  "xp_type": "workload_exp",
+  "duration": 45,
+  "workloads": [
+    {
+      "index": 0,
+      "node": "s0",
+      "kind": "custom_server",
+      "raw_command": "/home/user/Desktop/test/rpcbench/bin/cloudgw -certs /home/user/Desktop/test/rpcbench/certs -bind 0.0.0.0 -modes qtun",
+      "bound_command": "/home/user/Desktop/test/rpcbench/bin/cloudgw -certs /home/user/Desktop/test/rpcbench/certs -bind 0.0.0.0 -modes qtun"
+    },
+    {
+      "index": 1,
+      "node": "c0",
+      "kind": "custom_client",
+      "raw_command": "/home/user/Desktop/test/rpcbench/bin/edgegw -server {server_ip:s0} -mode qtun -streams 8 -batch 600 -pad 0 -inflight 1 -duration 30s -warmup 5s -ca /home/user/Desktop/test/rpcbench/certs/ca.pem -server-name 10.0.2.2 -label tput-qtun-loss0p05 -out {output_dir}/rpcbench.json -param loss_pct=0.05 -param regime=tput -param wan_bw_mbps=50.0 -param base_rtt_ms=40.0 -param streams=8",
+      "bound_command": "/home/user/Desktop/test/rpcbench/bin/edgegw -server 10.0.2.2 -mode qtun -streams 8 -batch 600 -pad 0 -inflight 1 -duration 30s -warmup 5s -ca /home/user/Desktop/test/rpcbench/certs/ca.pem -server-name 10.0.2.2 -label tput-qtun-loss0p05 -out /home/user/Desktop/test/gaia-experiment-main/output/test/xp_test_tput_qtun_l0p05/rep7/rpcbench.json -param loss_pct=0.05 -param regime=tput -param wan_bw_mbps=50.0 -param base_rtt_ms=40.0 -param streams=8"
+    }
+  ]
+}

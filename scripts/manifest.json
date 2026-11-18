@@ -1,0 +1,1821 @@
+{
+  "schema": "test.rpcbench.manifest/1",
+  "gaia": "/home/user/Desktop/test/gaia-experiment-main",
+  "rpcbench": "/home/user/Desktop/test/rpcbench",
+  "repeats": 10,
+  "pcap": "no",
+  "network": {
+    "access_delay_ms": 1.0,
+    "wan_delay_ms": 18.0,
+    "base_rtt_ms": 40.0,
+    "wan_bw_mbps": 50.0,
+    "wan_queue_size": 100,
+    "access_queue_size": 1000,
+    "derived_wan": {
+      "one_way_delay_ms": 18.0,
+      "rtt_contribution_ms": 36.0,
+      "bdp_pkts": 150,
+      "queuing_delay_ms": 22,
+      "buffer_bytes": 362500.0,
+      "buffer_pkts": 241.66666666666666
+    },
+    "derived_access": {
+      "one_way_delay_ms": 1.0,
+      "rtt_contribution_ms": 2.0,
+      "bdp_pkts": 167,
+      "queuing_delay_ms": 11,
+      "buffer_bytes": 1625500.0,
+      "buffer_pkts": 1083.6666666666667
+    }
+  },
+  "regimes": {
+    "hol": {
+      "streams": 8,
+      "batch": 20,
+      "inflight": 1,
+      "pad": 0,
+      "duration": 30,
+      "warmup": 5
+    },
+    "tput": {
+      "streams": 8,
+      "batch": 600,
+      "inflight": 1,
+      "pad": 0,
+      "duration": 30,
+      "warmup": 5
+    }
+  },
+  "topologies": {
+    "0": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0",
+    "0p05": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p05",
+    "0p1": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p1",
+    "0p2": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p2",
+    "0p5": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p5",
+    "1": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l1",
+    "2": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l2",
+    "5": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l5"
+  },
+  "runs": [
+    {
+      "regime": "hol",
+      "mode": "rest",
+      "loss_pct": 0.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_rest_l0",
+      "name": "xp_test_hol_rest_l0"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpc",
+      "loss_pct": 0.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpc_l0",
+      "name": "xp_test_hol_grpc_l0"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpcm",
+      "loss_pct": 0.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpcm_l0",
+      "name": "xp_test_hol_grpcm_l0"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3",
+      "loss_pct": 0.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3_l0",
+      "name": "xp_test_hol_h3_l0"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3m",
+      "loss_pct": 0.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3m_l0",
+      "name": "xp_test_hol_h3m_l0"
+    },
+    {
+      "regime": "hol",
+      "mode": "qtun",
+      "loss_pct": 0.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_qtun_l0",
+      "name": "xp_test_hol_qtun_l0"
+    },
+    {
+      "regime": "hol",
+      "mode": "rest",
+      "loss_pct": 0.05,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p05",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_rest_l0p05",
+      "name": "xp_test_hol_rest_l0p05"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpc",
+      "loss_pct": 0.05,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p05",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpc_l0p05",
+      "name": "xp_test_hol_grpc_l0p05"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpcm",
+      "loss_pct": 0.05,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p05",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpcm_l0p05",
+      "name": "xp_test_hol_grpcm_l0p05"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3",
+      "loss_pct": 0.05,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p05",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3_l0p05",
+      "name": "xp_test_hol_h3_l0p05"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3m",
+      "loss_pct": 0.05,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p05",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3m_l0p05",
+      "name": "xp_test_hol_h3m_l0p05"
+    },
+    {
+      "regime": "hol",
+      "mode": "qtun",
+      "loss_pct": 0.05,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p05",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_qtun_l0p05",
+      "name": "xp_test_hol_qtun_l0p05"
+    },
+    {
+      "regime": "hol",
+      "mode": "rest",
+      "loss_pct": 0.1,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p1",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_rest_l0p1",
+      "name": "xp_test_hol_rest_l0p1"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpc",
+      "loss_pct": 0.1,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p1",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpc_l0p1",
+      "name": "xp_test_hol_grpc_l0p1"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpcm",
+      "loss_pct": 0.1,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p1",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpcm_l0p1",
+      "name": "xp_test_hol_grpcm_l0p1"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3",
+      "loss_pct": 0.1,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p1",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3_l0p1",
+      "name": "xp_test_hol_h3_l0p1"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3m",
+      "loss_pct": 0.1,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p1",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3m_l0p1",
+      "name": "xp_test_hol_h3m_l0p1"
+    },
+    {
+      "regime": "hol",
+      "mode": "qtun",
+      "loss_pct": 0.1,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p1",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_qtun_l0p1",
+      "name": "xp_test_hol_qtun_l0p1"
+    },
+    {
+      "regime": "hol",
+      "mode": "rest",
+      "loss_pct": 0.2,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p2",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_rest_l0p2",
+      "name": "xp_test_hol_rest_l0p2"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpc",
+      "loss_pct": 0.2,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p2",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpc_l0p2",
+      "name": "xp_test_hol_grpc_l0p2"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpcm",
+      "loss_pct": 0.2,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p2",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpcm_l0p2",
+      "name": "xp_test_hol_grpcm_l0p2"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3",
+      "loss_pct": 0.2,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p2",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3_l0p2",
+      "name": "xp_test_hol_h3_l0p2"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3m",
+      "loss_pct": 0.2,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p2",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3m_l0p2",
+      "name": "xp_test_hol_h3m_l0p2"
+    },
+    {
+      "regime": "hol",
+      "mode": "qtun",
+      "loss_pct": 0.2,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p2",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_qtun_l0p2",
+      "name": "xp_test_hol_qtun_l0p2"
+    },
+    {
+      "regime": "hol",
+      "mode": "rest",
+      "loss_pct": 0.5,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_rest_l0p5",
+      "name": "xp_test_hol_rest_l0p5"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpc",
+      "loss_pct": 0.5,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpc_l0p5",
+      "name": "xp_test_hol_grpc_l0p5"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpcm",
+      "loss_pct": 0.5,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpcm_l0p5",
+      "name": "xp_test_hol_grpcm_l0p5"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3",
+      "loss_pct": 0.5,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3_l0p5",
+      "name": "xp_test_hol_h3_l0p5"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3m",
+      "loss_pct": 0.5,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3m_l0p5",
+      "name": "xp_test_hol_h3m_l0p5"
+    },
+    {
+      "regime": "hol",
+      "mode": "qtun",
+      "loss_pct": 0.5,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_qtun_l0p5",
+      "name": "xp_test_hol_qtun_l0p5"
+    },
+    {
+      "regime": "hol",
+      "mode": "rest",
+      "loss_pct": 1.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l1",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_rest_l1",
+      "name": "xp_test_hol_rest_l1"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpc",
+      "loss_pct": 1.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l1",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpc_l1",
+      "name": "xp_test_hol_grpc_l1"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpcm",
+      "loss_pct": 1.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l1",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpcm_l1",
+      "name": "xp_test_hol_grpcm_l1"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3",
+      "loss_pct": 1.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l1",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3_l1",
+      "name": "xp_test_hol_h3_l1"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3m",
+      "loss_pct": 1.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l1",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3m_l1",
+      "name": "xp_test_hol_h3m_l1"
+    },
+    {
+      "regime": "hol",
+      "mode": "qtun",
+      "loss_pct": 1.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l1",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_qtun_l1",
+      "name": "xp_test_hol_qtun_l1"
+    },
+    {
+      "regime": "hol",
+      "mode": "rest",
+      "loss_pct": 2.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l2",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_rest_l2",
+      "name": "xp_test_hol_rest_l2"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpc",
+      "loss_pct": 2.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l2",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpc_l2",
+      "name": "xp_test_hol_grpc_l2"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpcm",
+      "loss_pct": 2.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l2",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpcm_l2",
+      "name": "xp_test_hol_grpcm_l2"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3",
+      "loss_pct": 2.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l2",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3_l2",
+      "name": "xp_test_hol_h3_l2"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3m",
+      "loss_pct": 2.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l2",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3m_l2",
+      "name": "xp_test_hol_h3m_l2"
+    },
+    {
+      "regime": "hol",
+      "mode": "qtun",
+      "loss_pct": 2.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l2",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_qtun_l2",
+      "name": "xp_test_hol_qtun_l2"
+    },
+    {
+      "regime": "hol",
+      "mode": "rest",
+      "loss_pct": 5.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_rest_l5",
+      "name": "xp_test_hol_rest_l5"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpc",
+      "loss_pct": 5.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpc_l5",
+      "name": "xp_test_hol_grpc_l5"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpcm",
+      "loss_pct": 5.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpcm_l5",
+      "name": "xp_test_hol_grpcm_l5"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3",
+      "loss_pct": 5.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3_l5",
+      "name": "xp_test_hol_h3_l5"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3m",
+      "loss_pct": 5.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3m_l5",
+      "name": "xp_test_hol_h3m_l5"
+    },
+    {
+      "regime": "hol",
+      "mode": "qtun",
+      "loss_pct": 5.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_qtun_l5",
+      "name": "xp_test_hol_qtun_l5"
+    },
+    {
+      "regime": "tput",
+      "mode": "rest",
+      "loss_pct": 0.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_rest_l0",
+      "name": "xp_test_tput_rest_l0"
+    },
+    {
+      "regime": "tput",
+      "mode": "grpc",
+      "loss_pct": 0.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_grpc_l0",
+      "name": "xp_test_tput_grpc_l0"
+    },
+    {
+      "regime": "tput",
+      "mode": "grpcm",
+      "loss_pct": 0.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_grpcm_l0",
+      "name": "xp_test_tput_grpcm_l0"
+    },
+    {
+      "regime": "tput",
+      "mode": "h3",
+      "loss_pct": 0.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_h3_l0",
+      "name": "xp_test_tput_h3_l0"
+    },
+    {
+      "regime": "tput",
+      "mode": "h3m",
+      "loss_pct": 0.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_h3m_l0",
+      "name": "xp_test_tput_h3m_l0"
+    },
+    {
+      "regime": "tput",
+      "mode": "qtun",
+      "loss_pct": 0.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_qtun_l0",
+      "name": "xp_test_tput_qtun_l0"
+    },
+    {
+      "regime": "tput",
+      "mode": "rest",
+      "loss_pct": 0.05,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p05",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_rest_l0p05",
+      "name": "xp_test_tput_rest_l0p05"
+    },
+    {
+      "regime": "tput",
+      "mode": "grpc",
+      "loss_pct": 0.05,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p05",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_grpc_l0p05",
+      "name": "xp_test_tput_grpc_l0p05"
+    },
+    {
+      "regime": "tput",
+      "mode": "grpcm",
+      "loss_pct": 0.05,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p05",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_grpcm_l0p05",
+      "name": "xp_test_tput_grpcm_l0p05"
+    },
+    {
+      "regime": "tput",
+      "mode": "h3",
+      "loss_pct": 0.05,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p05",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_h3_l0p05",
+      "name": "xp_test_tput_h3_l0p05"
+    },
+    {
+      "regime": "tput",
+      "mode": "h3m",
+      "loss_pct": 0.05,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p05",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_h3m_l0p05",
+      "name": "xp_test_tput_h3m_l0p05"
+    },
+    {
+      "regime": "tput",
+      "mode": "qtun",
+      "loss_pct": 0.05,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p05",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_qtun_l0p05",
+      "name": "xp_test_tput_qtun_l0p05"
+    },
+    {
+      "regime": "tput",
+      "mode": "rest",
+      "loss_pct": 0.1,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p1",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_rest_l0p1",
+      "name": "xp_test_tput_rest_l0p1"
+    },
+    {
+      "regime": "tput",
+      "mode": "grpc",
+      "loss_pct": 0.1,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p1",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_grpc_l0p1",
+      "name": "xp_test_tput_grpc_l0p1"
+    },
+    {
+      "regime": "tput",
+      "mode": "grpcm",
+      "loss_pct": 0.1,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p1",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_grpcm_l0p1",
+      "name": "xp_test_tput_grpcm_l0p1"
+    },
+    {
+      "regime": "tput",
+      "mode": "h3",
+      "loss_pct": 0.1,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p1",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_h3_l0p1",
+      "name": "xp_test_tput_h3_l0p1"
+    },
+    {
+      "regime": "tput",
+      "mode": "h3m",
+      "loss_pct": 0.1,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p1",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_h3m_l0p1",
+      "name": "xp_test_tput_h3m_l0p1"
+    },
+    {
+      "regime": "tput",
+      "mode": "qtun",
+      "loss_pct": 0.1,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p1",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_qtun_l0p1",
+      "name": "xp_test_tput_qtun_l0p1"
+    },
+    {
+      "regime": "tput",
+      "mode": "rest",
+      "loss_pct": 0.2,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p2",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_rest_l0p2",
+      "name": "xp_test_tput_rest_l0p2"
+    },
+    {
+      "regime": "tput",
+      "mode": "grpc",
+      "loss_pct": 0.2,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p2",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_grpc_l0p2",
+      "name": "xp_test_tput_grpc_l0p2"
+    },
+    {
+      "regime": "tput",
+      "mode": "grpcm",
+      "loss_pct": 0.2,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p2",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_grpcm_l0p2",
+      "name": "xp_test_tput_grpcm_l0p2"
+    },
+    {
+      "regime": "tput",
+      "mode": "h3",
+      "loss_pct": 0.2,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p2",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_h3_l0p2",
+      "name": "xp_test_tput_h3_l0p2"
+    },
+    {
+      "regime": "tput",
+      "mode": "h3m",
+      "loss_pct": 0.2,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p2",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_h3m_l0p2",
+      "name": "xp_test_tput_h3m_l0p2"
+    },
+    {
+      "regime": "tput",
+      "mode": "qtun",
+      "loss_pct": 0.2,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p2",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_qtun_l0p2",
+      "name": "xp_test_tput_qtun_l0p2"
+    },
+    {
+      "regime": "tput",
+      "mode": "rest",
+      "loss_pct": 0.5,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_rest_l0p5",
+      "name": "xp_test_tput_rest_l0p5"
+    },
+    {
+      "regime": "tput",
+      "mode": "grpc",
+      "loss_pct": 0.5,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_grpc_l0p5",
+      "name": "xp_test_tput_grpc_l0p5"
+    },
+    {
+      "regime": "tput",
+      "mode": "grpcm",
+      "loss_pct": 0.5,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_grpcm_l0p5",
+      "name": "xp_test_tput_grpcm_l0p5"
+    },
+    {
+      "regime": "tput",
+      "mode": "h3",
+      "loss_pct": 0.5,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_h3_l0p5",
+      "name": "xp_test_tput_h3_l0p5"
+    },
+    {
+      "regime": "tput",
+      "mode": "h3m",
+      "loss_pct": 0.5,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_h3m_l0p5",
+      "name": "xp_test_tput_h3m_l0p5"
+    },
+    {
+      "regime": "tput",
+      "mode": "qtun",
+      "loss_pct": 0.5,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_qtun_l0p5",
+      "name": "xp_test_tput_qtun_l0p5"
+    },
+    {
+      "regime": "tput",
+      "mode": "rest",
+      "loss_pct": 1.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l1",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_rest_l1",
+      "name": "xp_test_tput_rest_l1"
+    },
+    {
+      "regime": "tput",
+      "mode": "grpc",
+      "loss_pct": 1.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l1",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_grpc_l1",
+      "name": "xp_test_tput_grpc_l1"
+    },
+    {
+      "regime": "tput",
+      "mode": "grpcm",
+      "loss_pct": 1.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l1",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_grpcm_l1",
+      "name": "xp_test_tput_grpcm_l1"
+    },
+    {
+      "regime": "tput",
+      "mode": "h3",
+      "loss_pct": 1.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l1",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_h3_l1",
+      "name": "xp_test_tput_h3_l1"
+    },
+    {
+      "regime": "tput",
+      "mode": "h3m",
+      "loss_pct": 1.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l1",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_h3m_l1",
+      "name": "xp_test_tput_h3m_l1"
+    },
+    {
+      "regime": "tput",
+      "mode": "qtun",
+      "loss_pct": 1.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l1",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_qtun_l1",
+      "name": "xp_test_tput_qtun_l1"
+    },
+    {
+      "regime": "tput",
+      "mode": "rest",
+      "loss_pct": 2.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l2",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_rest_l2",
+      "name": "xp_test_tput_rest_l2"
+    },
+    {
+      "regime": "tput",
+      "mode": "grpc",
+      "loss_pct": 2.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l2",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_grpc_l2",
+      "name": "xp_test_tput_grpc_l2"
+    },
+    {
+      "regime": "tput",
+      "mode": "grpcm",
+      "loss_pct": 2.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l2",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_grpcm_l2",
+      "name": "xp_test_tput_grpcm_l2"
+    },
+    {
+      "regime": "tput",
+      "mode": "h3",
+      "loss_pct": 2.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l2",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_h3_l2",
+      "name": "xp_test_tput_h3_l2"
+    },
+    {
+      "regime": "tput",
+      "mode": "h3m",
+      "loss_pct": 2.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l2",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_h3m_l2",
+      "name": "xp_test_tput_h3m_l2"
+    },
+    {
+      "regime": "tput",
+      "mode": "qtun",
+      "loss_pct": 2.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l2",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_qtun_l2",
+      "name": "xp_test_tput_qtun_l2"
+    },
+    {
+      "regime": "tput",
+      "mode": "rest",
+      "loss_pct": 5.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_rest_l5",
+      "name": "xp_test_tput_rest_l5"
+    },
+    {
+      "regime": "tput",
+      "mode": "grpc",
+      "loss_pct": 5.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_grpc_l5",
+      "name": "xp_test_tput_grpc_l5"
+    },
+    {
+      "regime": "tput",
+      "mode": "grpcm",
+      "loss_pct": 5.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_grpcm_l5",
+      "name": "xp_test_tput_grpcm_l5"
+    },
+    {
+      "regime": "tput",
+      "mode": "h3",
+      "loss_pct": 5.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_h3_l5",
+      "name": "xp_test_tput_h3_l5"
+    },
+    {
+      "regime": "tput",
+      "mode": "h3m",
+      "loss_pct": 5.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_h3m_l5",
+      "name": "xp_test_tput_h3m_l5"
+    },
+    {
+      "regime": "tput",
+      "mode": "qtun",
+      "loss_pct": 5.0,
+      "streams": 8,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_tput_qtun_l5",
+      "name": "xp_test_tput_qtun_l5"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpc",
+      "loss_pct": 0.0,
+      "streams": 2,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpc_n2_l0",
+      "name": "xp_test_hol_grpc_n2_l0"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpcm",
+      "loss_pct": 0.0,
+      "streams": 2,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpcm_n2_l0",
+      "name": "xp_test_hol_grpcm_n2_l0"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3",
+      "loss_pct": 0.0,
+      "streams": 2,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3_n2_l0",
+      "name": "xp_test_hol_h3_n2_l0"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3m",
+      "loss_pct": 0.0,
+      "streams": 2,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3m_n2_l0",
+      "name": "xp_test_hol_h3m_n2_l0"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpc",
+      "loss_pct": 0.5,
+      "streams": 2,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpc_n2_l0p5",
+      "name": "xp_test_hol_grpc_n2_l0p5"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpcm",
+      "loss_pct": 0.5,
+      "streams": 2,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpcm_n2_l0p5",
+      "name": "xp_test_hol_grpcm_n2_l0p5"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3",
+      "loss_pct": 0.5,
+      "streams": 2,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3_n2_l0p5",
+      "name": "xp_test_hol_h3_n2_l0p5"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3m",
+      "loss_pct": 0.5,
+      "streams": 2,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3m_n2_l0p5",
+      "name": "xp_test_hol_h3m_n2_l0p5"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpc",
+      "loss_pct": 1.0,
+      "streams": 2,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l1",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpc_n2_l1",
+      "name": "xp_test_hol_grpc_n2_l1"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpcm",
+      "loss_pct": 1.0,
+      "streams": 2,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l1",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpcm_n2_l1",
+      "name": "xp_test_hol_grpcm_n2_l1"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3",
+      "loss_pct": 1.0,
+      "streams": 2,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l1",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3_n2_l1",
+      "name": "xp_test_hol_h3_n2_l1"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3m",
+      "loss_pct": 1.0,
+      "streams": 2,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l1",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3m_n2_l1",
+      "name": "xp_test_hol_h3m_n2_l1"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpc",
+      "loss_pct": 2.0,
+      "streams": 2,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l2",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpc_n2_l2",
+      "name": "xp_test_hol_grpc_n2_l2"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpcm",
+      "loss_pct": 2.0,
+      "streams": 2,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l2",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpcm_n2_l2",
+      "name": "xp_test_hol_grpcm_n2_l2"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3",
+      "loss_pct": 2.0,
+      "streams": 2,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l2",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3_n2_l2",
+      "name": "xp_test_hol_h3_n2_l2"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3m",
+      "loss_pct": 2.0,
+      "streams": 2,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l2",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3m_n2_l2",
+      "name": "xp_test_hol_h3m_n2_l2"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpc",
+      "loss_pct": 5.0,
+      "streams": 2,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpc_n2_l5",
+      "name": "xp_test_hol_grpc_n2_l5"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpcm",
+      "loss_pct": 5.0,
+      "streams": 2,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpcm_n2_l5",
+      "name": "xp_test_hol_grpcm_n2_l5"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3",
+      "loss_pct": 5.0,
+      "streams": 2,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3_n2_l5",
+      "name": "xp_test_hol_h3_n2_l5"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3m",
+      "loss_pct": 5.0,
+      "streams": 2,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3m_n2_l5",
+      "name": "xp_test_hol_h3m_n2_l5"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpc",
+      "loss_pct": 0.0,
+      "streams": 4,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpc_n4_l0",
+      "name": "xp_test_hol_grpc_n4_l0"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpcm",
+      "loss_pct": 0.0,
+      "streams": 4,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpcm_n4_l0",
+      "name": "xp_test_hol_grpcm_n4_l0"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3",
+      "loss_pct": 0.0,
+      "streams": 4,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3_n4_l0",
+      "name": "xp_test_hol_h3_n4_l0"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3m",
+      "loss_pct": 0.0,
+      "streams": 4,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3m_n4_l0",
+      "name": "xp_test_hol_h3m_n4_l0"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpc",
+      "loss_pct": 0.5,
+      "streams": 4,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpc_n4_l0p5",
+      "name": "xp_test_hol_grpc_n4_l0p5"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpcm",
+      "loss_pct": 0.5,
+      "streams": 4,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpcm_n4_l0p5",
+      "name": "xp_test_hol_grpcm_n4_l0p5"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3",
+      "loss_pct": 0.5,
+      "streams": 4,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3_n4_l0p5",
+      "name": "xp_test_hol_h3_n4_l0p5"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3m",
+      "loss_pct": 0.5,
+      "streams": 4,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3m_n4_l0p5",
+      "name": "xp_test_hol_h3m_n4_l0p5"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpc",
+      "loss_pct": 1.0,
+      "streams": 4,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l1",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpc_n4_l1",
+      "name": "xp_test_hol_grpc_n4_l1"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpcm",
+      "loss_pct": 1.0,
+      "streams": 4,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l1",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpcm_n4_l1",
+      "name": "xp_test_hol_grpcm_n4_l1"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3",
+      "loss_pct": 1.0,
+      "streams": 4,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l1",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3_n4_l1",
+      "name": "xp_test_hol_h3_n4_l1"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3m",
+      "loss_pct": 1.0,
+      "streams": 4,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l1",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3m_n4_l1",
+      "name": "xp_test_hol_h3m_n4_l1"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpc",
+      "loss_pct": 2.0,
+      "streams": 4,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l2",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpc_n4_l2",
+      "name": "xp_test_hol_grpc_n4_l2"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpcm",
+      "loss_pct": 2.0,
+      "streams": 4,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l2",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpcm_n4_l2",
+      "name": "xp_test_hol_grpcm_n4_l2"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3",
+      "loss_pct": 2.0,
+      "streams": 4,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l2",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3_n4_l2",
+      "name": "xp_test_hol_h3_n4_l2"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3m",
+      "loss_pct": 2.0,
+      "streams": 4,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l2",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3m_n4_l2",
+      "name": "xp_test_hol_h3m_n4_l2"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpc",
+      "loss_pct": 5.0,
+      "streams": 4,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpc_n4_l5",
+      "name": "xp_test_hol_grpc_n4_l5"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpcm",
+      "loss_pct": 5.0,
+      "streams": 4,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpcm_n4_l5",
+      "name": "xp_test_hol_grpcm_n4_l5"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3",
+      "loss_pct": 5.0,
+      "streams": 4,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3_n4_l5",
+      "name": "xp_test_hol_h3_n4_l5"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3m",
+      "loss_pct": 5.0,
+      "streams": 4,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3m_n4_l5",
+      "name": "xp_test_hol_h3m_n4_l5"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpc",
+      "loss_pct": 0.0,
+      "streams": 16,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpc_n16_l0",
+      "name": "xp_test_hol_grpc_n16_l0"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpcm",
+      "loss_pct": 0.0,
+      "streams": 16,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpcm_n16_l0",
+      "name": "xp_test_hol_grpcm_n16_l0"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3",
+      "loss_pct": 0.0,
+      "streams": 16,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3_n16_l0",
+      "name": "xp_test_hol_h3_n16_l0"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3m",
+      "loss_pct": 0.0,
+      "streams": 16,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3m_n16_l0",
+      "name": "xp_test_hol_h3m_n16_l0"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpc",
+      "loss_pct": 0.5,
+      "streams": 16,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpc_n16_l0p5",
+      "name": "xp_test_hol_grpc_n16_l0p5"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpcm",
+      "loss_pct": 0.5,
+      "streams": 16,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpcm_n16_l0p5",
+      "name": "xp_test_hol_grpcm_n16_l0p5"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3",
+      "loss_pct": 0.5,
+      "streams": 16,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3_n16_l0p5",
+      "name": "xp_test_hol_h3_n16_l0p5"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3m",
+      "loss_pct": 0.5,
+      "streams": 16,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0p5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3m_n16_l0p5",
+      "name": "xp_test_hol_h3m_n16_l0p5"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpc",
+      "loss_pct": 1.0,
+      "streams": 16,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l1",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpc_n16_l1",
+      "name": "xp_test_hol_grpc_n16_l1"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpcm",
+      "loss_pct": 1.0,
+      "streams": 16,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l1",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpcm_n16_l1",
+      "name": "xp_test_hol_grpcm_n16_l1"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3",
+      "loss_pct": 1.0,
+      "streams": 16,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l1",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3_n16_l1",
+      "name": "xp_test_hol_h3_n16_l1"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3m",
+      "loss_pct": 1.0,
+      "streams": 16,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l1",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3m_n16_l1",
+      "name": "xp_test_hol_h3m_n16_l1"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpc",
+      "loss_pct": 2.0,
+      "streams": 16,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l2",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpc_n16_l2",
+      "name": "xp_test_hol_grpc_n16_l2"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpcm",
+      "loss_pct": 2.0,
+      "streams": 16,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l2",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpcm_n16_l2",
+      "name": "xp_test_hol_grpcm_n16_l2"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3",
+      "loss_pct": 2.0,
+      "streams": 16,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l2",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3_n16_l2",
+      "name": "xp_test_hol_h3_n16_l2"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3m",
+      "loss_pct": 2.0,
+      "streams": 16,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l2",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3m_n16_l2",
+      "name": "xp_test_hol_h3m_n16_l2"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpc",
+      "loss_pct": 5.0,
+      "streams": 16,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpc_n16_l5",
+      "name": "xp_test_hol_grpc_n16_l5"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpcm",
+      "loss_pct": 5.0,
+      "streams": 16,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpcm_n16_l5",
+      "name": "xp_test_hol_grpcm_n16_l5"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3",
+      "loss_pct": 5.0,
+      "streams": 16,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3_n16_l5",
+      "name": "xp_test_hol_h3_n16_l5"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3m",
+      "loss_pct": 5.0,
+      "streams": 16,
+      "ramp": false,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3m_n16_l5",
+      "name": "xp_test_hol_h3m_n16_l5"
+    },
+    {
+      "regime": "hol",
+      "mode": "rest",
+      "loss_pct": 0.0,
+      "streams": 8,
+      "ramp": true,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_rest_ramp_l0",
+      "name": "xp_test_hol_rest_ramp_l0"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpc",
+      "loss_pct": 0.0,
+      "streams": 8,
+      "ramp": true,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpc_ramp_l0",
+      "name": "xp_test_hol_grpc_ramp_l0"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpcm",
+      "loss_pct": 0.0,
+      "streams": 8,
+      "ramp": true,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpcm_ramp_l0",
+      "name": "xp_test_hol_grpcm_ramp_l0"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3",
+      "loss_pct": 0.0,
+      "streams": 8,
+      "ramp": true,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3_ramp_l0",
+      "name": "xp_test_hol_h3_ramp_l0"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3m",
+      "loss_pct": 0.0,
+      "streams": 8,
+      "ramp": true,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l0",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3m_ramp_l0",
+      "name": "xp_test_hol_h3m_ramp_l0"
+    },
+    {
+      "regime": "hol",
+      "mode": "rest",
+      "loss_pct": 1.0,
+      "streams": 8,
+      "ramp": true,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l1",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_rest_ramp_l1",
+      "name": "xp_test_hol_rest_ramp_l1"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpc",
+      "loss_pct": 1.0,
+      "streams": 8,
+      "ramp": true,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l1",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpc_ramp_l1",
+      "name": "xp_test_hol_grpc_ramp_l1"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpcm",
+      "loss_pct": 1.0,
+      "streams": 8,
+      "ramp": true,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l1",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpcm_ramp_l1",
+      "name": "xp_test_hol_grpcm_ramp_l1"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3",
+      "loss_pct": 1.0,
+      "streams": 8,
+      "ramp": true,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l1",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3_ramp_l1",
+      "name": "xp_test_hol_h3_ramp_l1"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3m",
+      "loss_pct": 1.0,
+      "streams": 8,
+      "ramp": true,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l1",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3m_ramp_l1",
+      "name": "xp_test_hol_h3m_ramp_l1"
+    },
+    {
+      "regime": "hol",
+      "mode": "rest",
+      "loss_pct": 2.0,
+      "streams": 8,
+      "ramp": true,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l2",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_rest_ramp_l2",
+      "name": "xp_test_hol_rest_ramp_l2"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpc",
+      "loss_pct": 2.0,
+      "streams": 8,
+      "ramp": true,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l2",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpc_ramp_l2",
+      "name": "xp_test_hol_grpc_ramp_l2"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpcm",
+      "loss_pct": 2.0,
+      "streams": 8,
+      "ramp": true,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l2",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpcm_ramp_l2",
+      "name": "xp_test_hol_grpcm_ramp_l2"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3",
+      "loss_pct": 2.0,
+      "streams": 8,
+      "ramp": true,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l2",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3_ramp_l2",
+      "name": "xp_test_hol_h3_ramp_l2"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3m",
+      "loss_pct": 2.0,
+      "streams": 8,
+      "ramp": true,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l2",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3m_ramp_l2",
+      "name": "xp_test_hol_h3m_ramp_l2"
+    },
+    {
+      "regime": "hol",
+      "mode": "rest",
+      "loss_pct": 5.0,
+      "streams": 8,
+      "ramp": true,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_rest_ramp_l5",
+      "name": "xp_test_hol_rest_ramp_l5"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpc",
+      "loss_pct": 5.0,
+      "streams": 8,
+      "ramp": true,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpc_ramp_l5",
+      "name": "xp_test_hol_grpc_ramp_l5"
+    },
+    {
+      "regime": "hol",
+      "mode": "grpcm",
+      "loss_pct": 5.0,
+      "streams": 8,
+      "ramp": true,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_grpcm_ramp_l5",
+      "name": "xp_test_hol_grpcm_ramp_l5"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3",
+      "loss_pct": 5.0,
+      "streams": 8,
+      "ramp": true,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3_ramp_l5",
+      "name": "xp_test_hol_h3_ramp_l5"
+    },
+    {
+      "regime": "hol",
+      "mode": "h3m",
+      "loss_pct": 5.0,
+      "streams": 8,
+      "ramp": true,
+      "topo": "/home/user/Desktop/test/gaia-experiment-main/config/topo/topo_test_l5",
+      "xp": "/home/user/Desktop/test/gaia-experiment-main/config/xp/xp_test_hol_h3m_ramp_l5",
+      "name": "xp_test_hol_h3m_ramp_l5"
+    }
+  ]
+}

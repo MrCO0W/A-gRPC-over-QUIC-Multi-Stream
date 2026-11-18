@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="440" font-family="Helvetica, Arial, sans-serif" font-size="12">
+<rect width="760" height="440" fill="white"/>
+<line x1="70" x2="510" y1="390.0" y2="390.0" stroke="#e5e5e5"/>
+<text x="64" y="394.0" text-anchor="end" fill="#555">10</text>
+<line x1="70" x2="510" y1="353.9" y2="353.9" stroke="#e5e5e5"/>
+<text x="64" y="357.9" text-anchor="end" fill="#555">20</text>
+<line x1="70" x2="510" y1="306.1" y2="306.1" stroke="#e5e5e5"/>
+<text x="64" y="310.1" text-anchor="end" fill="#555">50</text>
+<line x1="70" x2="510" y1="270.0" y2="270.0" stroke="#e5e5e5"/>
+<text x="64" y="274.0" text-anchor="end" fill="#555">100</text>
+<line x1="70" x2="510" y1="233.9" y2="233.9" stroke="#e5e5e5"/>
+<text x="64" y="237.9" text-anchor="end" fill="#555">200</text>
+<line x1="70" x2="510" y1="186.1" y2="186.1" stroke="#e5e5e5"/>
+<text x="64" y="190.1" text-anchor="end" fill="#555">500</text>
+<line x1="70" x2="510" y1="150.0" y2="150.0" stroke="#e5e5e5"/>
+<text x="64" y="154.0" text-anchor="end" fill="#555">1000</text>
+<line x1="70" x2="510" y1="113.9" y2="113.9" stroke="#e5e5e5"/>
+<text x="64" y="117.9" text-anchor="end" fill="#555">2000</text>
+<line x1="70" x2="510" y1="66.1" y2="66.1" stroke="#e5e5e5"/>
+<text x="64" y="70.1" text-anchor="end" fill="#555">5000</text>
+<line x1="70" x2="510" y1="30.0" y2="30.0" stroke="#e5e5e5"/>
+<text x="64" y="34.0" text-anchor="end" fill="#555">10000</text>
+<text x="70.0" y="408" text-anchor="middle" fill="#555">0</text>
+<text x="510.0" y="408" text-anchor="middle" fill="#555">5</text>
+<line x1="70" x2="510" y1="390" y2="390" stroke="#333"/>
+<line x1="70" x2="70" y1="30" y2="390" stroke="#333"/>
+<text x="290.0" y="428" text-anchor="middle">loss per direction (%)</text>
+<text transform="translate(18,210.0) rotate(-90)" text-anchor="middle">command latency, issue to Edge Agent (ms, log)</text>
+<text x="70" y="18" font-weight="bold">regime: idle  -  solid p99, dashed p50</text>
+<polyline fill="none" stroke="#c9a227" stroke-width="1.8" points="70.0,150.4 510.0,113.7"/>
+<polyline fill="none" stroke="#c9a227" stroke-width="1.2" stroke-dasharray="4 3" points="70.0,181.9 510.0,179.2"/>
+<circle cx="70.0" cy="150.4" r="3.2" fill="#c9a227"/>
+<circle cx="510.0" cy="113.7" r="3.2" fill="#c9a227"/>
+<circle cx="530.0" cy="36.0" r="3.2" fill="#c9a227"/>
+<text x="540" y="40">REST polling, HTTP/1.1, 1000 ms</text>
+<rect x="66.8" y="147.3" width="6.4" height="6.4" fill="#a07d10"/>
+<rect x="526.8" y="50.8" width="6.4" height="6.4" fill="#a07d10"/>
+<text x="540" y="58">REST polling, HTTP/2, 1000 ms</text>
+<polygon points="70.0,145.2 66.2,152.2 73.8,152.2" fill="#6e5500"/>
+<polygon points="530.0,68.0 526.2,75.0 533.8,75.0" fill="#6e5500"/>
+<text x="540" y="76">REST polling, HTTP/3, 1000 ms</text>
+<polyline fill="none" stroke="#f0a35e" stroke-width="1.8" points="70.0,260.2 510.0,182.0"/>
+<polyline fill="none" stroke="#f0a35e" stroke-width="1.2" stroke-dasharray="4 3" points="70.0,292.3 510.0,280.7"/>
+<circle cx="70.0" cy="260.2" r="3.2" fill="#f0a35e"/>
+<circle cx="510.0" cy="182.0" r="3.2" fill="#f0a35e"/>
+<circle cx="530.0" cy="90.0" r="3.2" fill="#f0a35e"/>
+<text x="540" y="94">REST polling, HTTP/1.1, 100 ms</text>
+<polyline fill="none" stroke="#4f86c6" stroke-width="1.8" points="70.0,295.0 510.0,193.2"/>
+<polyline fill="none" stroke="#4f86c6" stroke-width="1.2" stroke-dasharray="4 3" points="70.0,350.8 510.0,331.1"/>
+<rect x="66.8" y="291.8" width="6.4" height="6.4" fill="#4f86c6"/>
+<rect x="506.8" y="190.0" width="6.4" height="6.4" fill="#4f86c6"/>
+<rect x="526.8" y="104.8" width="6.4" height="6.4" fill="#4f86c6"/>
+<text x="540" y="112">REST long polling, HTTP/2</text>
+<polyline fill="none" stroke="#2a5a96" stroke-width="1.8" points="70.0,295.2 510.0,254.8"/>
+<polyline fill="none" stroke="#2a5a96" stroke-width="1.2" stroke-dasharray="4 3" points="70.0,350.9 510.0,350.6"/>
+<polygon points="70.0,291.2 66.2,298.2 73.8,298.2" fill="#2a5a96"/>
+<polygon points="510.0,250.8 506.2,257.8 513.8,257.8" fill="#2a5a96"/>
+<polygon points="530.0,122.0 526.2,129.0 533.8,129.0" fill="#2a5a96"/>
+<text x="540" y="130">REST long polling, HTTP/3</text>
+<polyline fill="none" stroke="#4e9a4a" stroke-width="1.8" points="70.0,350.9 510.0,208.8"/>
+<polyline fill="none" stroke="#4e9a4a" stroke-width="1.2" stroke-dasharray="4 3" points="70.0,351.8 510.0,351.7"/>
+<rect x="66.8" y="347.7" width="6.4" height="6.4" fill="#4e9a4a"/>
+<rect x="506.8" y="205.6" width="6.4" height="6.4" fill="#4e9a4a"/>
+<rect x="526.8" y="140.8" width="6.4" height="6.4" fill="#4e9a4a"/>
+<text x="540" y="148">REST + SSE, HTTP/2</text>
+<polyline fill="none" stroke="#2e6b2b" stroke-width="1.8" points="70.0,350.7 510.0,275.2"/>
+<polyline fill="none" stroke="#2e6b2b" stroke-width="1.2" stroke-dasharray="4 3" points="70.0,351.7 510.0,351.6"/>
+<polygon points="70.0,346.7 66.2,353.7 73.8,353.7" fill="#2e6b2b"/>
+<polygon points="510.0,271.2 506.2,278.2 513.8,278.2" fill="#2e6b2b"/>
+<polygon points="530.0,158.0 526.2,165.0 533.8,165.0" fill="#2e6b2b"/>
+<text x="540" y="166">REST + SSE, HTTP/3</text>
+<polyline fill="none" stroke="#d1495b" stroke-width="1.8" points="70.0,351.2 510.0,217.4"/>
+<polyline fill="none" stroke="#d1495b" stroke-width="1.2" stroke-dasharray="4 3" points="70.0,352.1 510.0,351.9"/>
+<rect x="66.8" y="348.0" width="6.4" height="6.4" fill="#d1495b"/>
+<rect x="506.8" y="214.2" width="6.4" height="6.4" fill="#d1495b"/>
+<rect x="526.8" y="176.8" width="6.4" height="6.4" fill="#d1495b"/>
+<text x="540" y="184">gRPC stream, HTTP/2</text>
+<polyline fill="none" stroke="#8b1e2f" stroke-width="1.8" points="70.0,350.8 510.0,264.1"/>
+<polyline fill="none" stroke="#8b1e2f" stroke-width="1.2" stroke-dasharray="4 3" points="70.0,351.8 510.0,351.7"/>
+<polygon points="70.0,346.8 66.2,353.8 73.8,353.8" fill="#8b1e2f"/>
+<polygon points="510.0,260.1 506.2,267.1 513.8,267.1" fill="#8b1e2f"/>
+<polygon points="530.0,194.0 526.2,201.0 533.8,201.0" fill="#8b1e2f"/>
+<text x="540" y="202">gRPC stream, HTTP/3</text>
+</svg>

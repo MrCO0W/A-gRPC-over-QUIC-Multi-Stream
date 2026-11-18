@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GAIA Network Topology & Scenario Editor</title>
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("gaia-theme");
+        if (!t) t = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) { document.documentElement.setAttribute("data-theme", "dark"); }
+    })();
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="logo">
+      <span class="logo-badge">🌐</span>
+      <h2>GAIA Visual Editor <span class="logo-sub">Topology & Scenario</span></h2>
+    </div>
+
+    <div class="header-actions">
+      <button id="btn-theme-toggle" class="btn btn-secondary" title="Toggle light/dark theme" aria-pressed="false">🌙 Dark</button>
+      <span class="header-divider"></span>
+      <button id="btn-validate" class="btn btn-info">✓ Validate & IPAM</button>
+      <button id="btn-export-topo" class="btn btn-success">💾 Export Topo Config</button>
+      <button id="btn-export-scenario" class="btn btn-primary">🚀 Export Exp JSON</button>
+    </div>
+  </header>
+
+  <div class="main-container">
+    <!-- Left Toolbar Palette -->
+    <div class="sidebar">
+      <h3>Palette</h3>
+      <div class="tool-group">
+        <button id="add-router-btn" class="tool-btn router-tool">
+          <span class="icon">🔀</span> Add Router
+        </button>
+        <button id="add-client-btn" class="tool-btn client-tool">
+          <span class="icon">💻</span> Add Client
+        </button>
+        <button id="add-server-btn" class="tool-btn server-tool">
+          <span class="icon">🖥️</span> Add Server
+        </button>
+        <button id="add-idle-btn" class="tool-btn idle-tool">
+          <span class="icon">⏸️</span> Add Idle Host
+        </button>
+        <button id="add-link-btn" class="tool-btn link-tool">
+          <span class="icon">🔗</span> Add Link
+        </button>
+        <button id="reset-view-btn" class="tool-btn" title="Reset canvas view to origin (Home key)">
+          <span class="icon">🎯</span> Reset View
+        </button>
+      </div>
+
+      <div id="inspector-panel" class="inspector-panel">
+        <h3>Properties Inspector</h3>
+        <div id="inspector-content">
+          <p class="muted">Select a node or link on the canvas to inspect and edit properties.</p>
+        </div>
+      </div>
+
+      <div class="status-panel">
+        <h3>Validation & Errors</h3>
+        <div id="validation-output" class="validation-box">
+          <span class="status-ok">Ready</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Central Interactive Canvas -->
+    <div class="canvas-container">
+      <svg id="canvas-svg"></svg>
+      <div id="canvas-nodes"></div>
+    </div>
+
+    <!-- Right IPAM & Preview Panel -->
+    <div class="preview-sidebar">
+      <!-- Load Saved Configurations -->
+      <div class="sidebar-section">
+        <h3>Load Saved Configurations</h3>
+        <div class="sidebar-load-group">
+          <div class="select-btn-combo">
+            <select id="config-select">
+              <option value="">-- Load Saved Topo --</option>
+            </select>
+            <button id="btn-load" class="btn btn-secondary">Load Topo</button>
+          </div>
+          <div class="select-btn-combo">
+            <select id="xp-config-select">
+              <option value="">-- Load Saved Exp --</option>
+            </select>
+            <button id="btn-load-xp" class="btn btn-secondary">Load Exp</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Target Filename Input & Path Previews (D-2) -->
+      <div class="sidebar-section">
+        <h3>Experiment Base Name</h3>
+        <input id="input-base-name" type="text" placeholder="e.g. sc4_web" title="Base name derives config/topo/topo_<name> and config/xp/xp_<name>">
+        <div id="path-preview-tag" class="path-preview-tag">
+          <span id="preview-topo-path">Topo: config/topo/topo_sc4_web</span>
+          <span class="preview-divider">|</span>
+          <span id="preview-xp-path">Exp: config/xp/xp_sc4_web</span>
+        </div>
+      </div>
+
+      <!-- IPAM Allocation Table -->
+      <div class="sidebar-section">
+        <h3>IPAM Allocation Table</h3>
+        <div id="ipam-table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Node</th>
+                <th>Role</th>
+                <th>Router</th>
+                <th>Assigned IP / Subnet</th>
+              </tr>
+            </thead>
+            <tbody id="ipam-tbody">
+              <tr><td colspan="4" class="muted">No nodes configured</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Computed Static Routes -->
+      <div class="sidebar-section">
+        <h3>Computed Static Routes</h3>
+        <div id="routes-container" class="routes-box">
+          <p class="muted">Click 'Validate & IPAM' to calculate BFS static routes.</p>
+        </div>
+      </div>
+
+      <!-- Config / Scenario Preview -->
+      <div class="sidebar-section preview-section">
+        <h3>Config / Scenario Preview</h3>
+        <div class="preview-tabs">
+          <button id="tab-topo-preview" class="tab-btn active">Topo Config</button>
+          <button id="tab-scenario-preview" class="tab-btn">Scenario JSON</button>
+        </div>
+        <textarea id="config-preview" readonly placeholder="Generated configuration preview..."></textarea>
+      </div>
+    </div>
+  </div>
+
+  <script src="editor.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+// test / thesis Experiment C - downlink command delivery.
+//
+// The NORMATIVE definition of the control-plane messages used by ctrlgw and
+// ctrledge. As with telemetry.proto, internal/wire/control.go is a
+// hand-written, byte-compatible implementation, so no protoc step is needed.
+//
+// The REST arms carry the same fields as JSON (see the json tags in
+// internal/wire/control.go); the gRPC arms carry them as protobuf inside gRPC
+// length-prefixed frames.
+
+syntax = "proto3";
+
+package test.control.v1;
+
+option go_package = "github.com/MrCO0W/A-gRPC-over-QUIC-Multi-Stream/rpcbench/gen/controlv1;controlv1";
+
+// A control command decided upstream (Edge Master / agent) and pushed down to
+// an Edge Agent, which forwards it to an actuator.
+message Command {
+  uint64 seq              = 1;  // per-agent monotonic sequence number
+  string device           = 2;  // target actuator, e.g. "fan-03"
+  string op               = 3;  // operation, e.g. "set_speed"
+  double value            = 4;  // operation argument
+  int64  issued_unix_ns   = 5;  // when the upstream decision was made
+  int64  valid_until_ns   = 6;  // end of the validity window (idempotency)
+  bytes  payload          = 7;  // optional opaque padding (controls size)
+}
+
+// Edge -> upstream: the actuator has accepted the command.
+message CommandAck {
+  uint64 seq            = 1;
+  int64  recv_unix_ns   = 2;  // when the Edge Agent received the command
+  int64  done_unix_ns   = 3;  // when the actuator call returned
+}
+
+// First message on a gRPC control session.
+message Hello {
+  string agent_id     = 1;
+  uint64 after_seq    = 2;  // resume point: deliver commands with seq > this
+  double cmd_rate     = 3;  // requested command rate (per second, Poisson)
+  uint32 cmd_bytes    = 4;  // requested payload padding per command
+  int64  seed         = 5;
+}
+
+// Everything the Edge Agent sends on a session after Hello.
+message EdgeMsg {
+  oneof body {
+    Hello      hello = 1;
+    CommandAck ack   = 2;
+  }
+}
+
+service Control {
+  // The Edge Agent opens this call once, right after connecting, and keeps it
+  // open. Upstream pushes Command messages on the response side whenever a
+  // decision is made; the Edge Agent sends Hello once and then CommandAcks.
+  rpc Session(stream EdgeMsg) returns (stream Command);
+}
